@@ -4,14 +4,21 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Patriot</title>
-		<link rel="stylesheet" href="/src/assets/scss/general-style/general.css" />
+		<link
+			rel="stylesheet"
+			href="/src/assets/scss/general-style/general.css"
+		/>
 	</head>
 
 	<body>
 		<header class="header">
 			<div class="header__left-block">
 				<a href="#" class="header__logo">
-					<img class="header__logo_img" src="/src/assets/img/logo.png" alt="Логотип" />
+					<img
+						class="header__logo_img"
+						src="/src/assets/img/logo.png"
+						alt="Логотип"
+					/>
 					<h2 class="header__logo_title">Patriot</h2>
 				</a>
 			</div>
@@ -47,231 +54,122 @@
 		</header>
 
 		<div class="preview preview__background">
-			<div class="preview__description">
-				<p class="preview__description_big-size">
-					Patriot — это ключ к успешному бизнесу по всей территории РФ
-				</p>
-				<p class="preview__description_small-size">
-					Роскошный, быстрый, практичный автомобиль на выгодных
-					условиях лизинга. Станьте ближе к мечте и сократите налог на
-					имущество в три раза.
-				</p>
+			<div class="preview__wrapper preview__background_dark">
+				<div class="preview__description">
+					<p class="preview__description_big-size">
+						Patriot — это ключ к успешному бизнесу по всей
+						территории РФ
+					</p>
+					<p class="preview__description_small-size">
+						Роскошный, быстрый, практичный автомобиль на выгодных
+						условиях лизинга. Станьте ближе к мечте и сократите
+						налог на имущество в три раза.
+					</p>
+					<div class="arrows arrows__bottom">
+						<button class="arrows__item"><</button>
+						<button class="arrows__item">></button>
+					</div>
+				</div>
+
+				<div class="feedback-form">
+					<h3 class="feedback-form__title">Оставить заявку</h3>
+					<p class="feedback-form__text">
+						Заполните форму и мы свяжемся с вами, чтобы узнать
+						детали вашего проекта
+					</p>
+
+					<form action="#" class="feedback-form__block">
+						<div class="feedback-form__block_item">
+							<p class="item__title">Имя*</p>
+							<input
+								required
+								name="name"
+								type="text"
+								class="item__input"
+							/>
+						</div>
+
+						<div class="feedback-form__block_item">
+							<p class="item__title">Телефон*</p>
+							<input
+								required
+								name="name"
+								type="number"
+								class="item__input"
+							/>
+						</div>
+
+						<div class="feedback-form__input_checkbox">
+							<input
+								id="info-transfer"
+								name="info-transfer"
+								type="checkbox"
+								class="checkbox_input"
+							/>
+							<label for="info-transfer" class="info-transfer">
+								Я принимаю
+								<a href="#" class="info-transfer__link"
+									>условия передачи информации</a
+								>
+							</label>
+						</div>
+						<button class="feedback-form__button">
+							Связаться с нами
+						</button>
+					</form>
+				</div>
 			</div>
 		</div>
 
-		<div class="arrows">
-			<button class="main__arrows_left"><</button>
-			<button class="main__arrows_right">></button>
-		</div>
-
-		<div class="feedback-form">
-			<div class="feedback-form__title">
-				<h3>Оставить заявку</h3>
-			</div>
-			<div class="feedback-form__text">
-				<p>
-					Заполните форму и мы свяжемся с вами, чтобы узнать детали
-					вашего проекта
-				</p>
-			</div>
-			<form action="#" class="feedback-form">
-				<div class="feedback-form__item">
-					<p class="input-title">Имя*</p>
-					<input
-						required
-						name="name"
-						type="text"
-						class="feedback-form__input"
-					/>
-				</div>
-
-				<div class="feedback-form__item">
-					<p class="input-title">Телефон*</p>
-					<input
-						required
-						name="name"
-						type="text"
-						class="feedback-form__input"
-					/>
-				</div>
-				
-				<div class="feedback-form__input_checkbox">
-					<input
-						id="info-transfer"
-						name="info-transfer"
-						type="checkbox"
-					/>
-					<label for="info-transfer">
-						Я принимаю
-						<a href="#" class="feedback-form__link"
-							>условия передачи информации</a
-						>
-					</label>
-				</div>
-				<button class="feedback-form__button">
-					Связаться с нами
-				</button>
-			</form>
-		</div>
-
-		<div class="block-rates">
-			<div class="block-rates__top">
-				<h2 class="block-rates__title">Тарифы</h2>
+		<div class="rates">
+			<div class="rates__top">
+				<h2 class="rates__top_title">Тарифы</h2>
 
 				<div class="arrows">
-					<button class="main__arrows_left"><</button>
-					<button class="main__arrows_right">></button>
-				</div>
-			</div>
-			
-			<div class="block-rates__tabs">
-				<div class="block-rates__tabs_title">
-					<p class="tabs_title-font">Лайт</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Visa, Master Card, Мир</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Apple Pay, Android Pay</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Электронные кошельки</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Оборот</p>
-					<p class="tabs_comission-font">От 0 до 200 т.р.</p>
-				</div>
-				<div class="block-rates__tabs_price">
-					<p class="tabs_price-font">120 000 Р</p>
-					<button class="tabs_price-font">Оплатить</button>
+					<button class="arrows__item"><</button>
+					<button class="arrows__item">></button>
 				</div>
 			</div>
 
-			<div class="banners">
-				<div class="banner_promotion">
-					<p>Акция</p>
+			<div class="rates__tabs">
+				<div class="rates__tab">
+					<div class="rates__tab_bg-img">
+						<p class="rates__tab_title-font">Лайт</p>
+					</div>
+					<div class="rates__tab_comission">
+						<p class="rates__tab_font">Visa, Master Card, Мир</p>
+						<p class="rates__tab_font-bold">3,7%</p>
+					</div>
+					<div class="rates__tab_comission">
+						<p class="rates__tab_font">Apple Pay, Android Pay</p>
+						<p class="rates__tab_font-bold">3,7%</p>
+					</div>
+					<div class="rates__tab_comission">
+						<p class="rates__tab_font">Электронные кошельки</p>
+						<p class="rates__tab_font-bold">3,7%</p>
+					</div>
+					<div class="rates__tab_comission">
+						<p class="rates__tab_font">Оборот</p>
+						<p class="rates__tab_font-bold">От 0 до 200 т.р.</p>
+					</div>
+					<div class="rates__tab_price">
+						<p class="rates__tab_price-font-bold">120 000 Р</p>
+						<button class="rates__tab_price-font">Оплатить</button>
+					</div>
 				</div>
-				<div class="banner_new">
-					<p>Новинка</p>
-				</div>
-				<div class="banner_promotion">
-					<p>Хит</p>
-				</div>
-			</div>
 
-			<div class="block-rates__tabs">
-				<div class="block-rates__tabs_title">
-					<p class="tabs_title-font">Лайт</p>
+				<div class="banners">
+					<div class="banner_promotion">
+						<p>Акция</p>
+					</div>
+					<div class="banner_new">
+						<p>Новинка</p>
+					</div>
+					<div class="banner_promotion">
+						<p>Хит</p>
+					</div>
 				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Visa, Master Card, Мир</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Apple Pay, Android Pay</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Электронные кошельки</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Оборот</p>
-					<p class="tabs_comission-font">От 0 до 200 т.р.</p>
-				</div>
-				<div class="block-rates__tabs_price">
-					<p class="tabs_price-font">120 000 Р</p>
-					<button class="tabs_price-font">Оплатить</button>
-				</div>
-			</div>
-
-			<div class="banners">
-				<div class="banner_promotion">
-					<p>Акция</p>
-				</div>
-				<div class="banner_promotion">
-					<p>Хит</p>
-				</div>
-			</div>
-
-			<div class="block-rates__tabs">
-				<div class="block-rates__tabs_title">
-					<p class="tabs_title-font">Лайт</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Visa, Master Card, Мир</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Apple Pay, Android Pay</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Электронные кошельки</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Оборот</p>
-					<p class="tabs_comission-font">От 0 до 200 т.р.</p>
-				</div>
-				<div class="block-rates__tabs_price">
-					<p class="tabs_price-font">120 000 Р</p>
-					<button class="tabs_price-font">Оплатить</button>
-				</div>
-			</div>
-
-			<div class="banners">
-				<div class="banner_promotion">
-					<p>Акция</p>
-				</div>
-				<div class="banner_new">
-					<p>Новинка</p>
-				</div>
-				<div class="banner_promotion">
-					<p>Хит</p>
-				</div>
-			</div>
-
-			<div class="block-rates__tabs">
-				<div class="block-rates__tabs_title">
-					<p class="tabs_title-font">Лайт</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Visa, Master Card, Мир</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Apple Pay, Android Pay</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Электронные кошельки</p>
-					<p class="tabs_comission-font">3,7%</p>
-				</div>
-				<div class="block-rates__tabs_comission">
-					<p class="tabs_comission-font">Оборот</p>
-					<p class="tabs_comission-font">От 0 до 200 т.р.</p>
-				</div>
-				<div class="block-rates__tabs_price">
-					<p class="tabs_price-font">120 000 Р</p>
-					<button class="tabs_price-font">Оплатить</button>
-				</div>
-			</div>
-
-			<div class="banners">
-				<div class="banner_promotion">
-					<p>Акция</p>
-				</div>
-				<div class="banner_new">
-					<p>Новинка</p>
-				</div>
-				<div class="banner_promotion">
-					<p>Хит</p>
-				</div>
-			</div>
+			</div>			
 		</div>
 	</body>
 </html>

@@ -1,0 +1,64 @@
+.rates {
+  width: 1920px;
+  height: 911px;
+}
+.rates__top {
+  width: 1519px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 200px 0;
+}
+.rates__top_title {
+  font-size: 42px;
+  font-family: Gilroy-Medium;
+}
+.rates__tabs {
+  width: 357px;
+  height: 570px;
+  border: #E5E5E5 1px solid;
+  border-radius: 15px;
+  margin: 10px 200px 0;
+}
+.rates__tabs .rates__tab {
+  margin: 0 30px;
+}
+.rates__tabs .rates__tab_bg-img {
+  height: 250px;
+  background: url("../../img/rate-img.jpg") center/100% auto no-repeat;
+}
+.rates__tabs .rates__tab .rates__tab_title-font {
+  font-size: 22px;
+  font-family: Gilroy-Medium;
+  padding: 0;
+  margin: 0;
+}
+.rates__tabs .rates__tab_comission {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.rates__tabs .rates__tab_comission .rates__tab_font {
+  font-size: 16px;
+  font-family: Gilroy-Light;
+}
+.rates__tabs .rates__tab_comission .rates__tab_font-bold {
+  font-size: 16px;
+  font-family: Gilroy-Medium;
+}
+.rates__tabs .rates__tab_price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.rates__tabs .rates__tab_price-font {
+  font-size: 16px;
+  font-family: Gilroy-Medium;
+}
+.rates__tabs .rates__tab_price-font-bold {
+  font-size: 16px;
+  font-family: Gilroy-Medium;
+}/*# sourceMappingURL=rates.css.map */

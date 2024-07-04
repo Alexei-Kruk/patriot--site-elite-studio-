@@ -41,6 +41,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 3;
 }
 .header__center-block .header__links {
   margin: 0 15px;
@@ -52,6 +53,7 @@
 .header__center-block .header__links .header__link {
   text-decoration: none;
   margin: 0 15px;
+  color: #000;
 }
 .header__center-block .header__links .header__link:hover {
   color: #000;
@@ -69,6 +71,7 @@
   align-items: center;
   margin: 0 30px;
   text-decoration: none;
+  color: #000;
 }
 .header__center-block .header__adress_img {
   margin: 0 8px;
@@ -96,6 +99,7 @@
   font-family: Gilroy-Medium;
   font-size: 16px;
   text-decoration: none;
+  color: #000;
 }
 .header__right-block .header__phone_img {
   margin: 0 8px;

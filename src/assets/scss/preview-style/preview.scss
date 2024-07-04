@@ -1,0 +1,146 @@
+.preview {
+	height: 770px;
+
+	&__background {
+		background: url('../../img/bg-img.jpg') center/100% auto no-repeat;
+
+		&_dark {
+			background-color: rgba(0, 0, 0, 0.5);
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 200px;
+		width: 1519px;
+
+		.preview__description {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: start;
+			align-items: start;
+			max-width: 745px;
+			// height: 526px;
+			color: #fff;
+
+			&_big-size {
+				font-size: 54px;
+				font-family: Gilroy-Medium;
+				padding: 0;
+				margin: 0 0 50px;
+			}
+
+			&_small-size {
+				font-size: 18px;
+				font-family: Gilroy-Light;
+				padding: 0;
+			}
+
+			.arrows__bottom {
+				flex-grow: 2;
+				margin: 140px 0 0;
+				padding: 0;
+			}
+		}
+
+		.feedback-form {
+			background-color: #fff;
+			// max-width: 487px;
+			// max-height: 526px;
+			padding: 35px 40px 40px;
+			border-radius: 15px;
+			// margin: 0;
+
+			&__title {
+				font-size: 32px;
+				font-family: Gilroy-Medium;
+				margin: 0 0 10px;
+			}
+
+			&__text {
+				font-size: 16px;
+				font-family: Gilroy-Light;
+				max-width: 407px;
+				margin-bottom: 25px;
+			}
+
+			&__block {
+				&_item {
+					display: flex;
+					flex-direction: column;
+					justify-content: start;
+					align-items: flex-start;
+					margin-bottom: 20px;
+
+					.item__title {
+						font-size: 16px;
+						font-family: Gilroy-Bold;
+						margin: 5px 0;
+					}
+
+					.item__input {
+						height: 48px;
+						width: 365px;
+						background-color: #f8f9fb;
+						border-radius: 10px;
+						border: #E5E5E5 1px solid;
+						font-size: 30px;
+						font-family: Gilroy-Medium;
+						padding: 0 20px;
+						margin: 0;
+					}
+				}
+			}
+
+			&__input_checkbox {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+				gap: 15px;
+				margin-top: 35px;
+
+				.checkbox_input {
+					height: 24px;
+					width: 24px;
+					background-color: #f8f9fb;
+					border-radius: 10px;
+					border: #E5E5E5 1px solid;
+					margin: 0;
+					padding: 0;
+					// border: none;
+					// font-size: 30px;
+					// font-family: Gilroy-Medium;
+				}
+
+				.info-transfer {
+					font-size: 14px;
+					font-family: Gilroy-Light;
+
+					&__link {
+						color: #000;
+						text-decoration: underline 1px solid;
+						text-underline-offset: 3px;
+					}
+				}
+			}
+
+			&__button {
+				width: 407px;
+				height: 50px;
+				background-color: #3e58e2;
+				color: #fff;
+				border: none;
+				border-radius: 10px;
+				font-size: 16px;
+				font-family: Gilroy-Medium;
+				margin-top: 35px;
+			}
+		}
+	}
+}

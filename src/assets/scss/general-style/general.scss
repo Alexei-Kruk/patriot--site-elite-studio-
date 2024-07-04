@@ -1,6 +1,9 @@
 @import url("../fonts-style/fonts.css");
 
 @import url("../header-style/header.css");
+@import url("../preview-style/preview.css");
+@import url("../arrows-style/arrows.css");
+@import url("../rates-style/rates.css");
 
 body {
 	margin: 0;
@@ -10,5 +13,5 @@ body {
 }
 
 main-color {
-	--main-color: #3E58E2
+	--main-color: #3E58E2;
 }

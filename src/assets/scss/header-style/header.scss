@@ -47,6 +47,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		flex-grow: 3;
 
 		.header__links {
 			margin: 0 15px;
@@ -59,12 +60,13 @@
 			.header__link {
 				text-decoration: none;
 				margin: 0 15px;
+				color: #000;
 
 				&:hover {
-					color: #000
+					color: #000;
 				}
 				&:visited {
-					color: #000
+					color: #000;
 				}
 				&:hover {
 					text-decoration: underline;
@@ -80,6 +82,7 @@
 			margin: 0 30px;
 
 			text-decoration: none;
+			color: #000;
 
 			&_img {
 				margin: 0 8px;
@@ -113,6 +116,7 @@
 			font-family: Gilroy-Medium;
 			font-size: 16px;
 			text-decoration: none;
+			color: #000;
 
 			&_img {
 				margin: 0 8px;
