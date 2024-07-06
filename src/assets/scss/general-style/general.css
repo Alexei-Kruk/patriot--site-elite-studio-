@@ -3,12 +3,23 @@
 @import url("../preview-style/preview.css");
 @import url("../arrows-style/arrows.css");
 @import url("../rates-style/rates.css");
-body {
+body, html {
   margin: 0;
   padding: 0;
+  background-color: #E5E5E5;
+}
+
+.container {
+  margin: 0 auto;
   max-width: 1920px;
 }
 
 main-color {
   --main-color: #3E58E2;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
 }/*# sourceMappingURL=general.css.map */

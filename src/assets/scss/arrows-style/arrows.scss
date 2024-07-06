@@ -15,3 +15,19 @@
 		font-family: Gilroy-Medium;
 	}
 }
+
+@media (min-width: 1250px) and (max-width: 1919px) {
+	.arrows {
+		gap: 8px;
+		&__item {
+			width: 44px;
+			height: 44px;
+		}
+	}
+}
+
+@media (max-width: 1249px) {
+	.arrows {
+		display: none;
+	}
+}
