@@ -15,7 +15,7 @@
   font-family: Gilroy-Medium;
 }
 
-@media (min-width: 1250px) and (max-width: 1919px) {
+@media (min-width: 1150px) and (max-width: 1919px) {
   .arrows {
     gap: 8px;
   }
@@ -24,7 +24,7 @@
     height: 44px;
   }
 }
-@media (max-width: 1249px) {
+@media (max-width: 1149px) {
   .arrows {
     display: none;
   }

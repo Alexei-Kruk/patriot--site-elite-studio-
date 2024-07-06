@@ -136,7 +136,7 @@
     width: 20px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1149px) {
   .header__center-block {
     display: none;
   }
