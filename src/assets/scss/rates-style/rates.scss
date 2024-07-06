@@ -1,6 +1,6 @@
 .rates {
 	width: 1920px;
-	height: 911px;
+	height: 811px;
 
 	&__top {
 		width: 1519px;
@@ -17,25 +17,44 @@
 	}
 
 	&__tabs {
-		width: 357px;
-		height: 570px;
-		border: #E5E5E5 1px solid;
-		border-radius: 15px;
 		margin: 10px 200px 0;
 
+		display: flex;
+		flex-direction: row;
+		gap: 30px;
+		
+
 		.rates__tab {
-			margin: 0 30px;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+			border-radius: 15px;
+			border: #E5E5E5 1px solid;
+			overflow: hidden;
 
-			&_bg-img {
+			width: 357px;
+			height: 570px;
+
+			&_title {
 				height: 250px;
-				background: url('../../img/rate-img.jpg') center/100% auto no-repeat;
-			}
+				position: relative;
 
-			.rates__tab_title-font {
-				font-size: 22px;
-				font-family: Gilroy-Medium;
-				padding: 0;
-				margin: 0;
+				&-img-container {
+					position: relative;
+				}
+
+				&-img {
+					width: 357px;
+				}
+
+				&-text {
+					font-size: 22px;
+					font-family: Gilroy-Medium;
+					position: absolute;
+					left: 30px;
+					bottom: 10px;
+					z-index: 1;
+				}
 			}
 
 			&_comission {
@@ -43,6 +62,8 @@
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
+				margin: 0 30px;
+				padding: 0;
 
 				.rates__tab_font {
 					font-size: 16px;
@@ -59,7 +80,14 @@
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
-				align-items: center;
+				align-items: normal;
+				margin: 0 30px;
+
+				.rates__tab_prices {
+					display: flex;
+					flex-direction: column;
+					margin-top: 12px;
+				}
 
 				&-font {
 					font-size: 16px;
@@ -67,10 +95,67 @@
 				}
 
 				&-font-bold {
+					font-size: 22px;
+					font-family: Gilroy-Medium;
+
+					&-old {
+						font-size: 16px;
+						font-family: Gilroy-Medium;
+						text-decoration: line-through;
+					}
+				}
+
+				&-button {
+					width: 134px;
+					height: 50px;
+					background-color: #3e58e2;
+					color: #fff;
+					border: none;
+					border-radius: 10px;
 					font-size: 16px;
 					font-family: Gilroy-Medium;
+					margin: 10px 0 30px;
 				}
 			}
+
+			.border-bottom {
+				border-bottom: 1px dashed #E5E5E5;
+			}
+		}
+	}
+
+	.banners {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 5px;
+
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		z-index: 1;
+
+		&__promotion {
+			background-color: #FAFF00;
+		}
+
+		&__new {
+			background-color: #57C325;
+		}
+
+		&__hit {
+			background-color: #FF2929;
+		}
+
+		&__text {
+			font-size: 12px;
+			font-family: Gilroy-Medium;
+			padding: 4px 8px 3px;
+			margin: 0;
+			text-transform: uppercase;
+			border-radius: 5px;
+			text-align: center;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 .rates {
   width: 1920px;
-  height: 911px;
+  height: 811px;
 }
 .rates__top {
   width: 1519px;
@@ -15,30 +15,46 @@
   font-family: Gilroy-Medium;
 }
 .rates__tabs {
-  width: 357px;
-  height: 570px;
-  border: #E5E5E5 1px solid;
-  border-radius: 15px;
   margin: 10px 200px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 .rates__tabs .rates__tab {
-  margin: 0 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border-radius: 15px;
+  border: #E5E5E5 1px solid;
+  overflow: hidden;
+  width: 357px;
+  height: 570px;
 }
-.rates__tabs .rates__tab_bg-img {
+.rates__tabs .rates__tab_title {
   height: 250px;
-  background: url("../../img/rate-img.jpg") center/100% auto no-repeat;
+  position: relative;
 }
-.rates__tabs .rates__tab .rates__tab_title-font {
+.rates__tabs .rates__tab_title-img-container {
+  position: relative;
+}
+.rates__tabs .rates__tab_title-img {
+  width: 357px;
+}
+.rates__tabs .rates__tab_title-text {
   font-size: 22px;
   font-family: Gilroy-Medium;
-  padding: 0;
-  margin: 0;
+  position: absolute;
+  left: 30px;
+  bottom: 10px;
+  z-index: 1;
 }
 .rates__tabs .rates__tab_comission {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 0 30px;
+  padding: 0;
 }
 .rates__tabs .rates__tab_comission .rates__tab_font {
   font-size: 16px;
@@ -52,13 +68,67 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: normal;
+  margin: 0 30px;
+}
+.rates__tabs .rates__tab_price .rates__tab_prices {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
 }
 .rates__tabs .rates__tab_price-font {
   font-size: 16px;
   font-family: Gilroy-Medium;
 }
 .rates__tabs .rates__tab_price-font-bold {
+  font-size: 22px;
+  font-family: Gilroy-Medium;
+}
+.rates__tabs .rates__tab_price-font-bold-old {
   font-size: 16px;
   font-family: Gilroy-Medium;
+  text-decoration: line-through;
+}
+.rates__tabs .rates__tab_price-button {
+  width: 134px;
+  height: 50px;
+  background-color: #3e58e2;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Gilroy-Medium;
+  margin: 10px 0 30px;
+}
+.rates__tabs .rates__tab .border-bottom {
+  border-bottom: 1px dashed #E5E5E5;
+}
+.rates .banners {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+}
+.rates .banners__promotion {
+  background-color: #FAFF00;
+}
+.rates .banners__new {
+  background-color: #57C325;
+}
+.rates .banners__hit {
+  background-color: #FF2929;
+}
+.rates .banners__text {
+  font-size: 12px;
+  font-family: Gilroy-Medium;
+  padding: 4px 8px 3px;
+  margin: 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-align: center;
 }/*# sourceMappingURL=rates.css.map */
