@@ -48,7 +48,7 @@
 .preview__wrapper .feedback-form__text {
   font-size: 16px;
   font-family: Gilroy-Light;
-  max-width: 407px;
+  width: 407px;
   margin-bottom: 25px;
 }
 .preview__wrapper .feedback-form__block_wrapper {
@@ -65,8 +65,6 @@
   justify-content: start;
   align-items: flex-start;
   margin-bottom: 20px;
-}
-.preview__wrapper .feedback-form__block_wrapper .feedback-form__block_item .item__title {
   font-size: 16px;
   font-family: Gilroy-Bold;
   margin: 5px 0;
@@ -80,7 +78,7 @@
   font-size: 30px;
   font-family: Gilroy-Medium;
   padding: 0 20px;
-  margin: 0;
+  margin: 5px 0 0 0;
 }
 .preview__wrapper .feedback-form .feedback-form__input_checkbox {
   display: flex;
@@ -121,7 +119,7 @@
   margin-top: 35px;
 }
 
-@media (max-width: 1650px) {
+@media (min-width: 1150px) and (max-width: 1650px) {
   .preview {
     background: url("../../img/bg-img-square.jpg") center/100% auto no-repeat;
   }
@@ -159,14 +157,13 @@
   }
   .preview__wrapper .feedback-form__block_wrapper .feedback-form__block_item {
     margin-bottom: 20px;
-  }
-  .preview__wrapper .feedback-form__block_wrapper .feedback-form__block_item .item__title {
     font-size: 15px;
   }
   .preview__wrapper .feedback-form__block_wrapper .feedback-form__block_item .item__input {
     height: 44px;
     width: 255px;
     font-size: 24px;
+    margin: 5px 0 0 0;
   }
   .preview__wrapper .feedback-form .feedback-form__input_checkbox {
     gap: 10px;
@@ -213,7 +210,7 @@
   }
   .preview__wrapper .feedback-form {
     padding: 25px 30px 30px;
-    max-width: 990px;
+    max-width: 830px;
   }
   .preview__wrapper .feedback-form__title {
     font-size: 20px;
@@ -221,28 +218,25 @@
   }
   .preview__wrapper .feedback-form__text {
     font-size: 14px;
-    max-width: 990px;
+    width: 630px;
   }
   .preview__wrapper .feedback-form__block_wrapper {
-    max-width: 990px;
+    max-width: 830px;
   }
   .preview__wrapper .feedback-form__block_wrapper .feedback-form__block {
     flex-flow: row wrap;
+    justify-content: flex-start;
     gap: 13px;
+    max-width: 830px;
   }
   .preview__wrapper .feedback-form__block_wrapper .feedback-form__block_item {
-    max-width: 990px;
-  }
-  .preview__wrapper .feedback-form__block_wrapper .feedback-form__block_item .item__title {
     font-size: 14px;
-    margin: 5px 0;
   }
   .preview__wrapper .feedback-form__block_wrapper .feedback-form__block_item .item__input {
     height: 44px;
-    width: 85%;
     font-size: 24px;
     padding: 0 20px;
-    margin: 0;
+    margin: 5px 0;
   }
   .preview__wrapper .feedback-form__block_wrapper .feedback-form__input_wrapper {
     display: flex;
