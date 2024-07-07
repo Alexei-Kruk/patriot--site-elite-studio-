@@ -3,6 +3,7 @@
 @import url("../preview-style/preview.css");
 @import url("../arrows-style/arrows.css");
 @import url("../pagination-style/pagination.css");
+@import url("../burger-menu-style/burger-menu.css");
 @import url("../rates-style/rates.css");
 body, html {
   margin: 0;

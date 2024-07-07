@@ -105,6 +105,9 @@
 .header__right-block .header__phone:hover {
   text-decoration: underline;
 }
+.header__right-block .header__burger-menu {
+  display: none;
+}
 
 @media (max-width: 1440px) {
   .header__left-block .header__logo_img {
@@ -139,6 +142,9 @@
 @media (max-width: 1149px) {
   .header__center-block {
     display: none;
+  }
+  .header__right-block .header__burger-menu {
+    display: block;
   }
 }
 @media (max-width: 768px) {

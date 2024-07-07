@@ -124,6 +124,10 @@
 				text-decoration: underline;
 			}
 		}
+
+		.header__burger-menu {
+			display: none;
+		}
 	}
 }
 
@@ -169,6 +173,11 @@
 @media (max-width: 1149px) {
 	.header__center-block {
 		display: none;
+	}
+	.header__right-block {
+		.header__burger-menu {
+			display: block;
+		}
 	}
 }
 

@@ -118,9 +118,6 @@
   font-family: Gilroy-Medium;
   margin-top: 35px;
 }
-.preview__wrapper .pagination {
-  display: none;
-}
 
 @media (min-width: 1150px) and (max-width: 1650px) {
   .preview {
