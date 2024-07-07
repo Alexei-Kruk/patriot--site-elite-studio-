@@ -188,4 +188,174 @@
     height: 44px;
     font-size: 15px;
   }
+}
+@media (max-width: 1399px) {
+  .rates {
+    padding: 60px 100px;
+  }
+  .rates .rates__tab_comission {
+    margin: 0 15px;
+  }
+  .rates .rates__tab_price {
+    margin: 0 15px 10px;
+  }
+  .rates .rates__tab_price-button {
+    width: 90px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 1249px) {
+  .rates {
+    padding: 40px 80px;
+  }
+}
+@media (max-width: 1149px) {
+  .rates {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 40px 90px;
+  }
+  .rates__top_title {
+    font-size: 28px;
+  }
+  .rates__tabs {
+    gap: 30px;
+  }
+  .rates__tabs .rates__tab {
+    width: auto;
+    height: 428px;
+  }
+  .rates__tabs .rates__tab_title {
+    height: 184px;
+  }
+  .rates__tabs .rates__tab_title-img {
+    max-width: 420px;
+    max-height: 184px;
+  }
+  .rates__tabs .rates__tab_title-text {
+    font-size: 22px;
+    left: 20px;
+    bottom: 0px;
+  }
+  .rates__tabs .rates__tab_comission {
+    margin: 0 20px;
+  }
+  .rates__tabs .rates__tab_comission .rates__tab_font {
+    font-size: 14px;
+  }
+  .rates__tabs .rates__tab_comission .rates__tab_font-bold {
+    font-size: 14px;
+  }
+  .rates__tabs .rates__tab_price {
+    margin: 5px 20px 20px;
+  }
+  .rates__tabs .rates__tab_price-font-bold {
+    font-size: 18px;
+  }
+  .rates__tabs .rates__tab_price-font-bold-old {
+    font-size: 14px;
+  }
+  .rates__tabs .rates__tab_price-button {
+    width: 115px;
+    height: 44px;
+    font-size: 14px;
+  }
+  .rates .banners {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+  }
+  .rates .banners__promotion {
+    background-color: #faff00;
+  }
+  .rates .banners__new {
+    background-color: #57c325;
+  }
+  .rates .banners__hit {
+    background-color: #ff2929;
+  }
+  .rates .banners__text {
+    font-size: 12px;
+    font-family: Gilroy-Medium;
+    padding: 4px 8px 3px;
+    margin: 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .rates {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 30px;
+  }
+  .rates__tabs {
+    gap: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .rates {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 15px;
+  }
+  .rates__top {
+    padding-top: 15px;
+  }
+  .rates__top_title {
+    font-size: 22px;
+  }
+  .rates__tabs {
+    margin: 10px 0 20px;
+    gap: 10px;
+  }
+  .rates__tabs .rates__tab {
+    width: 280px;
+    height: auto;
+  }
+  .rates__tabs .rates__tab_title {
+    height: 184px;
+  }
+  .rates__tabs .rates__tab_title-img {
+    width: 280px;
+  }
+  .rates__tabs .rates__tab_title-text {
+    font-size: 18px;
+    left: 15px;
+    bottom: 5px;
+  }
+  .rates__tabs .rates__tab_comission {
+    margin: 0 15px;
+  }
+  .rates__tabs .rates__tab_comission .rates__tab_font {
+    font-size: 14px;
+  }
+  .rates__tabs .rates__tab_comission .rates__tab_font-bold {
+    font-size: 14px;
+  }
+  .rates__tabs .rates__tab_price {
+    margin: 5px 15px 15px;
+  }
+  .rates__tabs .rates__tab_price-font-bold {
+    font-size: 18px;
+  }
+  .rates__tabs .rates__tab_price-font-bold-old {
+    font-size: 14px;
+  }
+  .rates__tabs .rates__tab_price-button {
+    width: 115px;
+    height: 44px;
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=rates.css.map */

@@ -92,7 +92,7 @@
 				}
 			}
 
-			.feedback-form__input_checkbox {
+			&__input_checkbox {
 				display: flex;
 				flex-direction: row;
 				justify-content: flex-start;
@@ -133,6 +133,10 @@
 				font-family: Gilroy-Medium;
 				margin-top: 35px;
 			}
+		}
+
+		.pagination {
+			display: none;
 		}
 	}
 }
@@ -283,10 +287,54 @@
 							}
 						}
 						.feedback-form__button {
-							max-width: 168px;
+							width: 168px;
 							height: 44px;
 							font-size: 14px;
 							margin: 0;
+						}
+					}
+				}
+			}
+			.pagination {
+				display: block;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.preview {
+		background: url('../../img/bg-img-square-small.jpg') center/100% auto no-repeat;
+		&__wrapper {
+			padding: 30px;
+			.preview__description {
+				max-width: 708px;
+				&_big-size {
+					font-size: 36px;
+					margin: 0 0 20px;
+				}
+				&_small-size {
+					font-size: 16px;
+					margin-bottom: 40px;
+				}
+			}
+			.feedback-form {
+				max-width: 708px;
+				&__text {
+					width: 648px;
+				}
+				&__block_wrapper {
+					max-width: 708px;
+					.feedback-form__block {
+						&_item {
+							.item__input {
+								height: 44px;
+								// max-width: 100%;
+								width: 275px;
+								font-size: 24px;
+								padding: 0 20px;
+								margin: 5px 0;
+							}
 						}
 					}
 				}
@@ -295,5 +343,64 @@
 	}
 }
 
-@media (min-width: 992px) and (max-width: 1049px) {
+@media (max-width: 400px) {
+	.preview {
+		&__wrapper {
+			padding: 15px;	
+			.preview__description {
+				max-width: 290px;	
+				&_big-size {
+					font-size: 26px;
+					margin: 20px 0 10px;
+				}
+				&_small-size {
+					font-size: 14px;
+				}
+			}
+			.feedback-form {
+				padding: 20px;
+				// margin: 15px;
+				max-width: 290px;	
+				&__title {
+					font-size: 20px;
+					margin: 0 0 10px;
+				}
+				&__text {
+					font-size: 14px;
+					width: 250px;
+					margin-bottom: 15px;
+				}
+				&__block_wrapper {
+					.feedback-form__block {
+						&_item {
+							margin-bottom: 0;
+							font-size: 14px;
+							.item__input {
+								height: 44px;
+								width: 230px;
+								font-size: 18px;
+								padding: 0 10px;
+							}
+						}
+					}
+				}
+				.feedback-form__input_checkbox {
+					gap: 10px;
+					margin-top: 15px;
+				}
+				.feedback-form__input_wrapper {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					gap: 20px;
+					.feedback-form__button {
+						width: 250px;
+						height: 44px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
 }
