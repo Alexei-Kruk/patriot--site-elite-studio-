@@ -1,14 +1,9 @@
-.rates__wrapper {
-	
-}
-
 .rates {
 	height: auto;
 	background-color: #fff;
 	padding: 100px 200px;
 
 	&__top {
-		// width: 1519px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -26,14 +21,13 @@
 		display: flex;
 		flex-direction: row;
 		gap: 30px;
-		
 
 		.rates__tab {
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: space-between;
 			border-radius: 15px;
-			border: #E5E5E5 1px solid;
+			border: #e5e5e5 1px solid;
 			overflow: hidden;
 
 			width: 357px;
@@ -84,20 +78,13 @@
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
-				align-items: normal;
-				margin: 0 30px;
+				align-items: center;
+				margin: 0 30px 20px;
 
 				.rates__tab_prices {
 					display: flex;
 					flex-direction: column;
-					margin-top: 12px;
 				}
-
-				&-font {
-					font-size: 16px;
-					font-family: Gilroy-Medium;
-				}
-
 				&-font-bold {
 					font-size: 22px;
 					font-family: Gilroy-Medium;
@@ -118,12 +105,12 @@
 					border-radius: 10px;
 					font-size: 16px;
 					font-family: Gilroy-Medium;
-					margin: 10px 0 30px;
+					// margin: 10px 0 30px;
 				}
 			}
 
 			.border-bottom {
-				border-bottom: 1px dashed #E5E5E5;
+				border-bottom: 1px dashed #e5e5e5;
 			}
 		}
 	}
@@ -141,15 +128,15 @@
 		z-index: 1;
 
 		&__promotion {
-			background-color: #FAFF00;
+			background-color: #faff00;
 		}
 
 		&__new {
-			background-color: #57C325;
+			background-color: #57c325;
 		}
 
 		&__hit {
-			background-color: #FF2929;
+			background-color: #ff2929;
 		}
 
 		&__text {
@@ -160,6 +147,82 @@
 			text-transform: uppercase;
 			border-radius: 5px;
 			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 1750px) {
+	.rates {
+		&__tabs {
+			.rates__tab {
+				&_price {
+					&-font-bold {
+						font-size: 18px;
+						&-old {
+							font-size: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1650px) {
+	.rates {
+		padding: 90px 150px;
+	}
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+	.rates {
+		padding: 90px 150px;
+		&__top {
+			&_title {
+				font-size: 31px;
+			}
+		}
+		&__tabs {
+			gap: 29px;
+			.rates__tab {
+				width: auto;
+				height: 432px;
+				&_title {
+					height: 184px;
+					&-img {
+						max-width: 300px;
+						max-height: 184px;
+					}
+					&-text {
+						font-size: 20px;
+						left: 25px;
+						bottom: 8px;
+					}
+				}
+				&_comission {
+					margin: 0 20px;
+					.rates__tab_font {
+						font-size: 15px;
+					}
+					.rates__tab_font-bold {
+						font-size: 15px;
+					}
+				}
+				&_price {
+					margin: 0 20px 10px;
+					&-font-bold {
+						font-size: 20px;
+						&-old {
+							font-size: 15px;
+						}
+					}
+					&-button {
+						width: 109px;
+						height: 44px;
+						font-size: 15px;
+					}
+				}
+			}
 		}
 	}
 }

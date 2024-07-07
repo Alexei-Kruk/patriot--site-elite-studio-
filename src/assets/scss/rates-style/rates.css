@@ -24,7 +24,7 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   border-radius: 15px;
-  border: #E5E5E5 1px solid;
+  border: #e5e5e5 1px solid;
   overflow: hidden;
   width: 357px;
   height: 570px;
@@ -67,17 +67,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: normal;
-  margin: 0 30px;
+  align-items: center;
+  margin: 0 30px 20px;
 }
 .rates__tabs .rates__tab_price .rates__tab_prices {
   display: flex;
   flex-direction: column;
-  margin-top: 12px;
-}
-.rates__tabs .rates__tab_price-font {
-  font-size: 16px;
-  font-family: Gilroy-Medium;
 }
 .rates__tabs .rates__tab_price-font-bold {
   font-size: 22px;
@@ -97,10 +92,9 @@
   border-radius: 10px;
   font-size: 16px;
   font-family: Gilroy-Medium;
-  margin: 10px 0 30px;
 }
 .rates__tabs .rates__tab .border-bottom {
-  border-bottom: 1px dashed #E5E5E5;
+  border-bottom: 1px dashed #e5e5e5;
 }
 .rates .banners {
   display: flex;
@@ -114,13 +108,13 @@
   z-index: 1;
 }
 .rates .banners__promotion {
-  background-color: #FAFF00;
+  background-color: #faff00;
 }
 .rates .banners__new {
-  background-color: #57C325;
+  background-color: #57c325;
 }
 .rates .banners__hit {
-  background-color: #FF2929;
+  background-color: #ff2929;
 }
 .rates .banners__text {
   font-size: 12px;
@@ -130,4 +124,68 @@
   text-transform: uppercase;
   border-radius: 5px;
   text-align: center;
+}
+
+@media (max-width: 1750px) {
+  .rates__tabs .rates__tab_price-font-bold {
+    font-size: 18px;
+  }
+  .rates__tabs .rates__tab_price-font-bold-old {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1650px) {
+  .rates {
+    padding: 90px 150px;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .rates {
+    padding: 90px 150px;
+  }
+  .rates__top_title {
+    font-size: 31px;
+  }
+  .rates__tabs {
+    gap: 29px;
+  }
+  .rates__tabs .rates__tab {
+    width: auto;
+    height: 432px;
+  }
+  .rates__tabs .rates__tab_title {
+    height: 184px;
+  }
+  .rates__tabs .rates__tab_title-img {
+    max-width: 300px;
+    max-height: 184px;
+  }
+  .rates__tabs .rates__tab_title-text {
+    font-size: 20px;
+    left: 25px;
+    bottom: 8px;
+  }
+  .rates__tabs .rates__tab_comission {
+    margin: 0 20px;
+  }
+  .rates__tabs .rates__tab_comission .rates__tab_font {
+    font-size: 15px;
+  }
+  .rates__tabs .rates__tab_comission .rates__tab_font-bold {
+    font-size: 15px;
+  }
+  .rates__tabs .rates__tab_price {
+    margin: 0 20px 10px;
+  }
+  .rates__tabs .rates__tab_price-font-bold {
+    font-size: 20px;
+  }
+  .rates__tabs .rates__tab_price-font-bold-old {
+    font-size: 15px;
+  }
+  .rates__tabs .rates__tab_price-button {
+    width: 109px;
+    height: 44px;
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=rates.css.map */
