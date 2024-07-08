@@ -22,7 +22,7 @@
   margin: auto 5px;
   text-align: center;
   position: relative;
-  background-color: #c4c4c4;
+  background-color: var(--background-color-body);
 }
 
 .p6 .is-active {
@@ -33,7 +33,7 @@
   align-self: center;
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 992px) {
   .pagination {
     display: none;
   }

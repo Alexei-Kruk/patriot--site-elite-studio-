@@ -1,4 +1,4 @@
-@import url("../colors/colors.css");
+@import url("../root/root.css");
 @import url("../fonts-style/fonts.css");
 @import url("../header-style/header.css");
 @import url("../banner-style/banner.css");
@@ -10,25 +10,64 @@ body, html {
   margin: 0;
   padding: 0;
   background-color: var(--background-color-body);
-  font-family: var(--font-stack);
+  font-family: var(--font-medium);
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1518px;
+  height: auto;
 }
 
+@media (max-width: 1700px) {
+  .wrapper {
+    max-width: 1700px;
+  }
+  .container {
+    max-width: 1390px;
+  }
+}
 @media (max-width: 1440px) {
+  .wrapper {
+    max-width: 1440px;
+  }
   .container {
     max-width: 1139px;
   }
 }
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 1200px;
+  }
+  .container {
+    max-width: 930px;
+  }
+}
+@media (max-width: 992px) {
+  .wrapper {
+    max-width: 992px;
+  }
+  .container {
+    max-width: 830px;
+  }
+}
 @media (max-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+  }
   .container {
     max-width: 708px;
   }
 }
 @media (max-width: 320px) {
+  .wrapper {
+    max-width: 320px;
+  }
   .container {
     max-width: 290px;
   }
