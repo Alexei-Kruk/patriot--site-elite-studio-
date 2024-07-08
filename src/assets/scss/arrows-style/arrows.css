@@ -12,6 +12,7 @@
   border: var(--border-color) 1px solid;
   background-color: var(--background-color);
   text-align: center;
+  color: #999999;
 }
 .arrows__item_link {
   text-decoration: none;
