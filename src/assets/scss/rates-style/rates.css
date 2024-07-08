@@ -1,7 +1,7 @@
 .rates {
   height: auto;
-  background-color: #fff;
-  padding: 100px 200px;
+  background-color: var(--background-color);
+  padding: 100px 0;
 }
 .rates__top {
   display: flex;
@@ -11,7 +11,6 @@
 }
 .rates__top_title {
   font-size: 42px;
-  font-family: Gilroy-Medium;
 }
 .rates__tabs {
   margin: 10px 0;
@@ -24,7 +23,7 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   border-radius: 15px;
-  border: #e5e5e5 1px solid;
+  border: var(--border-color) 1px solid;
   overflow: hidden;
   width: 357px;
   height: 570px;
@@ -41,7 +40,6 @@
 }
 .rates__tabs .rates__tab_title-text {
   font-size: 22px;
-  font-family: Gilroy-Medium;
   position: absolute;
   left: 30px;
   bottom: 10px;
@@ -61,7 +59,6 @@
 }
 .rates__tabs .rates__tab_comission .rates__tab_font-bold {
   font-size: 16px;
-  font-family: Gilroy-Medium;
 }
 .rates__tabs .rates__tab_price {
   display: flex;
@@ -76,25 +73,22 @@
 }
 .rates__tabs .rates__tab_price-font-bold {
   font-size: 22px;
-  font-family: Gilroy-Medium;
 }
 .rates__tabs .rates__tab_price-font-bold-old {
   font-size: 16px;
-  font-family: Gilroy-Medium;
   text-decoration: line-through;
 }
 .rates__tabs .rates__tab_price-button {
   width: 134px;
   height: 50px;
-  background-color: #3e58e2;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--font-color-second);
   border: none;
   border-radius: 10px;
   font-size: 16px;
-  font-family: Gilroy-Medium;
 }
 .rates__tabs .rates__tab .border-bottom {
-  border-bottom: 1px dashed #e5e5e5;
+  border-bottom: 1px dashed var(--border-color);
 }
 .rates .banners {
   display: flex;
@@ -108,17 +102,16 @@
   z-index: 1;
 }
 .rates .banners__promotion {
-  background-color: #faff00;
+  background-color: var(--cards-promo-color);
 }
 .rates .banners__new {
-  background-color: #57c325;
+  background-color: var(--cards-new-color);
 }
 .rates .banners__hit {
-  background-color: #ff2929;
+  background-color: var(--cards-hit-color);
 }
 .rates .banners__text {
   font-size: 12px;
-  font-family: Gilroy-Medium;
   padding: 4px 8px 3px;
   margin: 0;
   text-transform: uppercase;
@@ -136,12 +129,12 @@
 }
 @media (max-width: 1650px) {
   .rates {
-    padding: 90px 150px;
+    padding: 90px 0;
   }
 }
-@media (min-width: 1400px) and (max-width: 1800px) {
+@media (max-width: 1440px) {
   .rates {
-    padding: 90px 150px;
+    padding: 60px 0;
   }
   .rates__top_title {
     font-size: 31px;
@@ -189,33 +182,12 @@
     font-size: 15px;
   }
 }
-@media (max-width: 1399px) {
-  .rates {
-    padding: 60px 100px;
-  }
-  .rates .rates__tab_comission {
-    margin: 0 15px;
-  }
-  .rates .rates__tab_price {
-    margin: 0 15px 10px;
-  }
-  .rates .rates__tab_price-button {
-    width: 90px;
-    height: 40px;
-    font-size: 14px;
-  }
-}
-@media (max-width: 1249px) {
-  .rates {
-    padding: 40px 80px;
-  }
-}
 @media (max-width: 1149px) {
   .rates {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding: 40px 90px;
+    padding: 40px 0;
   }
   .rates__top_title {
     font-size: 28px;
@@ -268,28 +240,20 @@
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    z-index: 1;
-  }
-  .rates .banners__promotion {
-    background-color: #faff00;
-  }
-  .rates .banners__new {
-    background-color: #57c325;
-  }
-  .rates .banners__hit {
-    background-color: #ff2929;
   }
   .rates .banners__text {
     font-size: 12px;
-    font-family: Gilroy-Medium;
     padding: 4px 8px 3px;
     margin: 0;
-    text-transform: uppercase;
-    border-radius: 5px;
-    text-align: center;
+  }
+}
+@media (max-width: 992px) {
+  .rates__block {
+    display: flex;
+    flex-direction: column;
+  }
+  .rates__pagination {
+    align-self: center;
   }
 }
 @media (max-width: 768px) {
@@ -297,7 +261,7 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding: 30px;
+    padding: 30px 0;
   }
   .rates__tabs {
     gap: 20px;
@@ -308,7 +272,7 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding: 15px;
+    padding: 15px 0;
   }
   .rates__top {
     padding-top: 15px;
