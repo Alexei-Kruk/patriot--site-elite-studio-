@@ -1,12 +1,17 @@
+@import url("../colors/colors.css");
+
 .header {
-	height: auto;
+	max-height: 90px;
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0 35px;
 
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 
-	background-color: #fff;
+	background-color: var(--cards-hit-color);
 
 	&__left-block {
 		border-right: 1px solid #e5e5e5;
@@ -26,29 +31,18 @@
 
 			&_title {
 				font-size: 25px;
-				font-family: Gilroy-Medium;
+				// font-family: Gilroy-Medium;
 				text-transform: uppercase;
-				color: var(--main-color);
+				color: $cards-hit-color;
 				margin-right: 30px;
 
 				&:hover {
-					color: var(--main-color);
+					color: $cards-hit-color;
 					text-decoration: underline 1.3px;
 					text-underline-offset: 5px;
 				}
 			}
 		}
-	}
-
-	&__center-block {
-		font-family: Gilroy-Medium;
-		font-size: 16px;
-
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		flex-grow: 3;
 
 		.header__links {
 			margin: 0 15px;
@@ -74,6 +68,19 @@
 				}
 			}
 		}
+	}
+
+	&__center-block {
+		font-family: Gilroy-Medium;
+		font-size: 16px;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-grow: 3;
+
+		
 
 		.header__adress {
 			display: flex;

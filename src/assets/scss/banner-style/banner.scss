@@ -1,4 +1,4 @@
-.preview {
+.banner {
 	background: url('../../img/bg-img.jpg') center/100% auto no-repeat;
 
 	&__background-dark {
@@ -13,7 +13,7 @@
 		padding: 122px 200px;
 		// max-width: 1519px;
 
-		.preview__description {
+		.banner__description {
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: start;
@@ -137,13 +137,13 @@
 	}
 }
 
-@media (min-width: 1150px) and (max-width: 1650px) {
-	.preview {
+@media (min-width: 1150px) and (max-width: 1800px) {
+	.banner {
 		background: url('../../img/bg-img-square.jpg') center/100% auto
 			no-repeat;
 		&__wrapper {
 			padding: 90px 150px;
-			.preview__description {
+			.banner__description {
 				max-width: 555px;
 				&_big-size {
 					font-size: 40px;
@@ -206,7 +206,7 @@
 }
 
 @media (max-width: 1399px) {
-	.preview {
+	.banner {
 		&__wrapper {
 			padding: 60px 100px;
 		}
@@ -214,7 +214,7 @@
 }
 
 @media (max-width: 1249px) {
-	.preview {
+	.banner {
 		&__wrapper {
 			padding: 40px 80px;
 		}
@@ -222,11 +222,11 @@
 }
 
 @media (max-width: 1149px) {
-	.preview {
+	.banner {
 		&__wrapper {
 			flex-flow: column nowrap;
 			padding: 40px 90px;
-			.preview__description {
+			.banner__description {
 				max-width: 890px;
 				&_big-size {
 					font-size: 40px;
@@ -299,11 +299,11 @@
 }
 
 @media (max-width: 768px) {
-	.preview {
+	.banner {
 		background: url('../../img/bg-img-square-small.jpg') center/100% auto no-repeat;
 		&__wrapper {
 			padding: 30px;
-			.preview__description {
+			.banner__description {
 				max-width: 708px;
 				&_big-size {
 					font-size: 36px;
@@ -340,10 +340,10 @@
 }
 
 @media (max-width: 400px) {
-	.preview {
+	.banner {
 		&__wrapper {
 			padding: 15px;	
-			.preview__description {
+			.banner__description {
 				max-width: 290px;	
 				&_big-size {
 					font-size: 26px;
