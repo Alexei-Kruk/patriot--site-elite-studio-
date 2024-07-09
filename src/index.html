@@ -4,9 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Patriot</title>
+
+		<link href="path/to/styles.css" rel="stylesheet" />
 		<link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
 		<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
 		<link rel="stylesheet" href="./assets/scss/general-style/general.css" />
+
+		<script src="path/to/mburger.js" type="module"></script>
 	</head>
 
 	<body>
@@ -21,11 +25,13 @@
 					<h2 class="header__logo_title">Patriot</h2>
 				</a>
 
-				<nav class="header__links">
-					<a href="#" class="header__link">Услуги</a>
-					<a href="#" class="header__link">Продукция</a>
-					<a href="#" class="header__link">Проекты</a>
-					<a href="#" class="header__link">Компания</a>
+				<nav>
+					<ul class="header__links">
+						<li><a href="#" class="header__link">Услуги</a></li>
+						<li><a href="#" class="header__link">Продукция</a></li>
+						<li><a href="#" class="header__link">Проекты</a></li>
+						<li><a href="#" class="header__link">Компания</a></li>
+					</ul>
 				</nav>
 			</div>
 
@@ -46,8 +52,166 @@
 					/>
 					<span class="header__phone_text">+7 (800) 941-34-28</span>
 				</a>
+				<div class="burger-menu">
+					<img
+						class="burger-menu__icon"
+						src="./assets/img/burger-menu-icon.svg"
+						alt="Иконка меню"
+					/>
+				</div>
 			</div>
 		</header>
+
+
+		<!-- Бургер-меню -->
+
+		<div id="menu" class="wrapper menu">
+			<nav class="menu__nav container">
+				<ul class="menu__items">
+					<li class="menu__item">
+						<div class="menu__item_block">
+							<span
+								class="menu__item_block-title">
+								Услуги
+							</span>
+							<img
+								class="menu__item_block-img"
+								src="./assets/img/arrow-down.svg"
+								alt="Открыть пункт меню"
+							/>
+						</div>
+
+						<div class="menu__item_list">
+							<a href="#" class="menu__item_list-item">
+								Управление активами и инвестиции
+							</a>
+							<a href="#" class="menu__item_list-item">
+								Автоматизация бизнеса
+							</a>
+							<a href="#" class="menu__item_list-item">
+								Финансовый аудит
+							</a>
+							<a href="#" class="menu__item_list-item">
+								Юридическая практика
+							</a>
+							<a href="#" class="menu__item_list-item">
+								Лизинг
+							</a>
+							<a href="#" class="menu__item_list-item">
+								Информационная безопасность
+							</a>
+						</div>
+					</li>
+					<li class="menu__item">
+						<div class="menu__item_block">
+							<span
+								class="menu__item_block-title">
+								Продукция
+							</span>
+							<img
+								class="menu__item_block-img"
+								src="./assets/img/arrow-down.svg"
+								alt="Открыть пункт меню"
+							/>
+						</div>
+
+						<div class="menu__item_list">
+							<a href="#" class="menu__item_list-item">
+								Первый пункт
+							</a>
+							<a href="#" class="menu__item_list-item">
+								Второй пункт
+							</a>
+							<a href="#" class="menu__item_list-item">
+								Третий пункт
+							</a>
+						</div>
+					</li>
+					<li class="menu__item">
+						<div class="menu__item_block">
+							<span
+								class="menu__item_block-title">
+								Проекты
+							</span>
+							<img
+								class="menu__item_block-img"
+								src="./assets/img/arrow-down.svg"
+								alt="Открыть пункт меню"
+							/>
+						</div>
+
+						<div class="menu__item_list">
+							<a href="#" class="menu__item_list-item">
+								Первый пункт
+							</a>
+							<a href="#" class="menu__item_list-item">
+								Второй пункт
+							</a>
+							<a href="#" class="menu__item_list-item">
+								Третий пункт
+							</a>
+						</div>
+					</li>
+					<li class="menu__item">
+						<div class="menu__item_block">
+							<span
+								class="menu__item_block-title">
+								Компания
+							</span>
+							<img
+								class="menu__item_block-img"
+								src="./assets/img/arrow-down.svg"
+								alt="Открыть пункт меню"
+							/>
+						</div>
+
+						<div class="menu__item_list">
+							<a href="#" class="menu__item_list-item">
+								Первый пункт
+							</a>
+							<a href="#" class="menu__item_list-item">
+								Второй пункт
+							</a>
+						</div>
+					</li>
+					<li class="menu__item menu__item_hidden">
+						<div class="menu__item_block">
+							<span
+								class="menu__item_block-title">
+								Пресс-центр
+							</span>
+						</div>
+					</li>
+					<li class="menu__item menu__item_hidden">
+						<div class="menu__item_block">
+							<span
+								class="menu__item_block-title">
+								Контакты
+							</span>
+						</div>
+					</li>
+				</ul>
+				<a href="#" class="menu__adress">
+					<img
+						class="menu__adress_icon"
+						src="/src/assets/img/map-icon-24.svg"
+						alt="Иконка локации"
+					/>
+					<span class="menu__adress_text">Санкт-Петербург</span>
+				</a>
+				<a href="#" class="menu__phone">
+					<img
+						class="menu__phone_icon"
+						src="/src/assets/img/call-icon-24.svg"
+						alt="Иконка телефона"
+					/>
+					<span class="menu__phone_text">7 (800) 941-34-28</span>
+				</a>
+			</nav>
+		</div>
+
+
+		<!-- Баннер -->
 
 		<div class="wrapper banner">
 			<div class="banner__background-dark">
@@ -174,6 +338,9 @@
 				</div>
 			</div>
 		</div>
+
+
+		<!-- Тарифы -->
 
 		<div class="wrapper rates">
 			<div class="container rates__block">
@@ -616,5 +783,7 @@
 		<script src="scripts/jquery-3.6.1.min.js"></script>
 		<script src="scripts/owl.carousel.min.js"></script>
 		<script src="scripts/owl.carousel.script.js"></script>
+		<script src="path/to/mmenu.js"></script>
+		<script src="./scripts/menu.script.js"></script>
 	</body>
 </html>

@@ -7,6 +7,7 @@
 @import url("../pagination-style/pagination.css");
 @import url("../burger-menu-style/burger-menu.css");
 @import url("../rates-style/rates.css");
+@import url("../menu-style/menu.css");
 
 
 body, html {
@@ -25,6 +26,14 @@ body, html {
 	top: 510px;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+mm-burger {
+	--mb-bar-height: 2px;
+
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 5px;
 }
 
 .wrapper {
