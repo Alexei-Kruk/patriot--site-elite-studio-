@@ -16,6 +16,17 @@ body, html {
 	font-family: var(--font-medium);
 }
 
+.rates__owl-carousel.owl-carousel button.owl-dot {
+	margin-top: 35px;
+}
+
+.banner__owl-carousel.owl-carousel .owl-dots {
+	position: absolute;
+	top: 510px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 .wrapper {
 	margin: 0 auto;
 	max-width: 1920px;
@@ -79,4 +90,8 @@ body, html {
 	.container {
 		max-width: 290px;
 	}
+	.banner__owl-carousel.owl-carousel .owl-dots {
+		top: 665px;
+	}
 }
+

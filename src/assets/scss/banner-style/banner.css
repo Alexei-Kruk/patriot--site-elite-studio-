@@ -194,6 +194,7 @@
   }
   .banner .banner__block .feedback-form {
     max-width: 648px;
+    margin-bottom: 110px;
   }
   .banner .banner__block .feedback-form__title {
     font-size: 24px;
@@ -269,6 +270,7 @@
   .banner .banner__block .feedback-form {
     padding: 20px;
     max-width: 250px;
+    margin-bottom: 80px;
   }
   .banner .banner__block .feedback-form__title {
     font-size: 20px;

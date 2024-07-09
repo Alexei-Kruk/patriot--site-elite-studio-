@@ -139,9 +139,6 @@
   .rates__top_title {
     font-size: 31px;
   }
-  .rates__tabs {
-    gap: 29px;
-  }
   .rates__tabs .rates__tab {
     width: auto;
     height: 432px;
