@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-	new Mmenu('#menu', {
-		extensions: ['pagedim-black'], // Добавляем расширение для затемнения фона при открытом меню
-		navbar: {
-			title: 'Меню', // Заголовок меню
-		},
+	var menu = new Mmenu('#menu', {
+		// extensions: ['pagedim-black'], // Добавляем расширение для затемнения фона при открытом меню
+	});
+
+	document.getElementById('#open-menu').addEventListener('click', function () {
+		var api = menu.API;
+		api.open();
 	});
 });

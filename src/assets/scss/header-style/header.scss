@@ -201,6 +201,7 @@
 		max-width: 992px;
 		padding: 0 20px;
 		&__left-block {
+			padding-top: 5px;
 			.header__logo {
 				&::after {
 					display: none;

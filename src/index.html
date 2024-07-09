@@ -5,12 +5,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Patriot</title>
 
-		<link href="path/to/styles.css" rel="stylesheet" />
+		<!-- <link href="path/to/styles.css" rel="stylesheet" /> -->
 		<link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
 		<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
 		<link rel="stylesheet" href="./assets/scss/general-style/general.css" />
 
-		<script src="path/to/mburger.js" type="module"></script>
+		<link href="https://cdn.jsdelivr.net/npm/mmenujs/dist/mmenu.css" rel="stylesheet">
+
+		<style>
+			#menu {
+			  display: none; /* Скрываем меню по умолчанию */
+			}
+		</style>
+		<!-- <script src="path/to/mburger.js" type="module"></script> -->
 	</head>
 
 	<body>
@@ -52,7 +59,7 @@
 					/>
 					<span class="header__phone_text">+7 (800) 941-34-28</span>
 				</a>
-				<div class="burger-menu">
+				<div id="open-menu" class="burger-menu">
 					<img
 						class="burger-menu__icon"
 						src="./assets/img/burger-menu-icon.svg"
@@ -65,7 +72,7 @@
 
 		<!-- Бургер-меню -->
 
-		<div id="menu" class="wrapper menu">
+		<div id="menu" class="wrapper menu menu__open menu__close">
 			<nav class="menu__nav container">
 				<ul class="menu__items">
 					<li class="menu__item">
@@ -780,10 +787,11 @@
 			</div>
 		</div>
 
+		<script src="path/to/mmenu.js"></script>
 		<script src="scripts/jquery-3.6.1.min.js"></script>
 		<script src="scripts/owl.carousel.min.js"></script>
 		<script src="scripts/owl.carousel.script.js"></script>
-		<script src="path/to/mmenu.js"></script>
-		<script src="./scripts/menu.script.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/mmenujs/dist/mmenu.js"></script> -->
+		<script src="scripts/menu.script.js"></script>
 	</body>
 </html>

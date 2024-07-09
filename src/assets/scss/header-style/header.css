@@ -177,6 +177,9 @@
     max-width: 992px;
     padding: 0 20px;
   }
+  .header__left-block {
+    padding-top: 5px;
+  }
   .header__left-block .header__logo::after {
     display: none;
   }
