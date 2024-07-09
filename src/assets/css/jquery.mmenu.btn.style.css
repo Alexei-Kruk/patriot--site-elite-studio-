@@ -1,0 +1,74 @@
+/*СТили для верхнего меню*/
+.top-menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 10px 0px;
+	padding: 0px;
+}
+
+.top-menu li {
+	list-style: none;
+}
+
+.top-menu li a {
+	display: inline-block;
+	padding: 10px;
+}
+
+.top-menu li a:hover {
+	background-color: #e9ecef;
+}
+
+/*Стили для кнопки вызова меню*/
+
+.header-mmenu {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 40px;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 5px;
+    z-index: 1000;
+    left: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.header-mmenu.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.footer.fixed {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.header-mmenu a {
+    background: center center no-repeat #E9ECEF;
+    background-image: url(../img/mmenu_btn.png);
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    background-size: contain;
+}
+
+@media screen and (max-width: 780px) {
+	.header-mmenu {
+		display: block;
+	}
+
+	.top-menu {
+		display: none;
+	}
+}
+

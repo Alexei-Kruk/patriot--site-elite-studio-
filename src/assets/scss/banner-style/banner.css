@@ -1,5 +1,5 @@
 .banner {
-  background: url("../../img/bg-img.jpg") center/100% auto no-repeat;
+  background: url("../../img/bg/bg-img.jpg") center/100% auto no-repeat;
 }
 .banner__background-dark {
   background-color: rgba(0, 0, 0, 0.5);
@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 91px;
 }
 .banner .banner__block .banner__description {
   align-self: flex-start;
@@ -175,7 +176,7 @@
 }
 @media (max-width: 991px) {
   .banner {
-    background: url("../../img/bg-img-square.jpg") center/100% auto no-repeat;
+    background: url("../../img/bg/bg-img-square.jpg") center/100% auto no-repeat;
   }
   .banner .banner__block {
     flex-direction: column;
@@ -244,7 +245,7 @@
 }
 @media (max-width: 430px) {
   .banner {
-    background: url("../../img/bg-img-square-small.jpg") center/110% auto no-repeat;
+    background: url("../../img/bg/bg-img-square-small.jpg") center/110% auto no-repeat;
   }
   .banner .banner__block {
     flex-direction: column;

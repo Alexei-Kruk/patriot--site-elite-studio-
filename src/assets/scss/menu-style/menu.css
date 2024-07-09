@@ -8,6 +8,8 @@
     background-color: var(--background-color);
     margin: 0;
     padding: 0 30px;
+    position: absolute;
+    z-index: 5;
   }
   .menu__nav {
     margin: 0;
@@ -42,6 +44,8 @@
     align-items: start;
     gap: 15px;
     margin-bottom: 15px;
+    list-style-type: none;
+    padding-left: 0;
   }
   .menu__nav .menu__items .menu__item_list-item {
     font-size: 14px;

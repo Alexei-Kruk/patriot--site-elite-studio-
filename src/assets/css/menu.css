@@ -1,0 +1,44 @@
+/*Стили для кнопки вызова меню*/
+
+.header-mmenu {
+	background: #777;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	line-height: 40px;
+
+	/*display: none;*/
+
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	height: 40px;
+	padding: 0 50px;
+
+	position: fixed;
+	top: 0px;
+	z-index: 1000;
+}
+
+.header-mmenu.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.footer.fixed {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.header-mmenu a {
+	background: center center no-repeat transparent;
+	background-image: url('../img/mmenu_btn.png');
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 10px;
+}

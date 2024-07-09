@@ -3,6 +3,7 @@
 @import url("../header-style/header.css");
 @import url("../banner-style/banner.css");
 @import url("../arrows-style/arrows.css");
+@import url("../my-owl-carousel-style/my-owl-carousel.css");
 @import url("../burger-menu-style/burger-menu.css");
 @import url("../rates-style/rates.css");
 @import url("../menu-style/menu.css");
@@ -11,24 +12,6 @@ body, html {
   padding: 0;
   background-color: var(--background-color-body);
   font-family: var(--font-medium);
-}
-
-.rates__owl-carousel.owl-carousel button.owl-dot {
-  margin-top: 35px;
-}
-
-.banner__owl-carousel.owl-carousel .owl-dots {
-  position: absolute;
-  top: 510px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-mm-burger {
-  --mb-bar-height: 2px;
-  padding: 5px;
-  border: 1px solid;
-  border-radius: 5px;
 }
 
 .wrapper {
