@@ -27,13 +27,9 @@
 
 		<link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
 		<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
-		<!-- <link rel="stylesheet" href="./assets/css/hamburgers.min.css" />
-		<link rel="stylesheet" href="./assets/css/hamburgers.css" /> -->
 		<link rel="stylesheet" href="./assets/mmenu/mmenu.css" />
-		<link rel="stylesheet" href="./assets/scss/general-style/general.css" />
 		<link rel="stylesheet" href="./assets/css/menu.css" />
-
-		<script src="path/to/mburger.js" type="module"></script>
+		<link rel="stylesheet" href="./assets/scss/general-style/general.css" />
 	</head>
 
 	<body>
@@ -85,41 +81,11 @@
 						>
 					</a>
 
-					<!-- <mm-burger
-						menu="menu"
-						fx="squeeze"
-						ease="elastic"
-						role="button"
-						tabindex="0"
-						title="Открыть меню"
-					>
-						<button
-							class="hamburger hamburger--squeeze is-active"
-							type="button">
-							<span class="hamburger-box">
-								<span class="hamburger-inner"></span>
-							</span>
-						</button>
-					</mm-burger> -->
-
-					<div class="burger-menu">
-						<a href="#menu">
-							<mm-burger
-								menu="menu"
-								fx="squeeze"
-								ease="elastic"
-								role="button"
-								tabindex="0"
-								title="Открыть меню"
-							>
-								<img
-									class="burger-menu__icon"
-									src="./assets/img/header/burger-menu-icon.svg"
-									alt="Иконка меню"
-								/>
-							</mm-burger>
-						</a>
-					</div>
+					<a href="#menu" class="burger-menu">
+						<div class="burger">
+							<span></span>
+						</div>
+					</a>
 				</div>
 			</div>
 		</header>
@@ -807,7 +773,7 @@
 			</div>
 		</div>
 
-		<nav id="menu" class="menu menu__hidden">
+		<nav id="menu" class="menu menu__fade menu__hidden">
 			<ul class="Vertical">
 				<li>
 					<span>Услуги</span>

@@ -1,5 +1,51 @@
 .burger-menu {
 	display: none;
+	cursor: pointer;
+}
+
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 18px;
+	background-color: #fff;
+}
+
+.burger span{
+    height: 2px;
+    width: 100%;
+    transform: scale(1);
+    background-color: #000000;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #000000;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0 }
+
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
 }
 
 @media (max-width: 991px) {
@@ -12,4 +58,5 @@
 			width: 20px;
 		}
 	}
+	.burger { display: flex }
 }
