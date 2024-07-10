@@ -1,23 +1,31 @@
-//Создание адаптивного меню налету
-var topMenu = $('.top-menu').html(); //.top-menu - это класс html меню
-topMenu = topMenu
-	.replace(/class="[^"]*"/gi, '')
-	.replace(/style="[^"]*"/gi, '')
-	.replace(/id="[^"]*"/gi, ''); //Зачищаем всякую хрень
-
-$('nav#menu').html('<ul>' + topMenu + '</ul>');
-$('nav#menu').mmenu({
-	extensions: ['effect-menu-slide', 'effect-listitems-slide'],
-	navbars: [
-		{
-			height: 3,
-			title: 'Меню',
-			content: [''],
+document.addEventListener('DOMContentLoaded', () => {
+	new Mmenu('#menu', {
+		offCanvas: {
+			position: 'top',
+			zposition: 'front',
+			pageSelector: '.wrapper',
+			pageNodetype: 'div',
 		},
-		true,
-	],
-	counters: true,
-	dividers: {
-		fixed: true,
-	},
+		navbars: [
+			{
+				position: 'top',
+				content: ['prev'],
+			},
+		],
+		backButton: true,
+		theme: 'white',
+		iconPanels: {
+			add: true,
+			visible: 1,
+		},
+		autoHeight: {
+			height: true,
+		},
+		onClick: {
+			close: true,
+		},
+	});
+
+	// const burger = document.querySelector('mm-burger');
+	// burger.state = 'cross';
 });

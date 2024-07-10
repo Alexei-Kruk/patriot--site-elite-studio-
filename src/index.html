@@ -27,856 +27,924 @@
 
 		<link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
 		<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
-		<link rel="stylesheet" href="./assets/scss/general-style/general.css" />
 		<link rel="stylesheet" href="./assets/css/menu.css" />
 		<link rel="stylesheet" href="dist/hamburgers.css" />
 		<link rel="stylesheet" href="./assets/mmenu/mmenu.css" />
+		<link rel="stylesheet" href="./assets/scss/general-style/general.css" />
 
-		<script>
-			document.addEventListener(
-				"DOMContentLoaded", () => {
-					new Mmenu( "#menu", {
-						slidingSubmenus: false
-					} );
-				}
-			);
-		</script>
+		<script src="path/to/mburger.js" type="module"></script>
 	</head>
 
 	<body>
-		<div id="page" class="mm-page">
-			<header id='"header' class="wrapper header">
-				<div class="header__body">
-					<div class="header__left-block">
-						<a href="#" class="header__logo">
-							<img
-								class="header__logo_img"
-								src="/src/assets/img/logo/logo.svg"
-								alt="Логотип"
-							/>
-							<h2 class="header__logo_title">Patriot</h2>
-						</a>
-	
-						<nav>
-							<ul class="header__links">
-								<li><a href="#" class="header__link">Услуги</a></li>
-								<li><a href="#" class="header__link">Продукция</a></li>
-								<li><a href="#" class="header__link">Проекты</a></li>
-								<li><a href="#" class="header__link">Компания</a></li>
-							</ul>
-						</nav>
+		<div class="mm-page">
+			
+				<header id='"header' class="wrapper header mm-fixed-top">
+					<div class="header__body">
+						<div class="header__left-block">
+							<a href="#" class="header__logo">
+								<img
+									class="header__logo_img"
+									src="/src/assets/img/logo/logo.svg"
+									alt="Логотип"
+								/>
+								<h2 class="header__logo_title">Patriot</h2>
+							</a>
+		
+							<nav>
+								<ul class="header__links">
+									<li><a href="#" class="header__link">Услуги</a></li>
+									<li><a href="#" class="header__link">Продукция</a></li>
+									<li><a href="#" class="header__link">Проекты</a></li>
+									<li><a href="#" class="header__link">Компания</a></li>
+								</ul>
+							</nav>
+						</div>
+		
+						<div class="header__right-block">
+							<a href="#" class="header__adress">
+								<img
+									class="header__icon"
+									src="/src/assets/img/header/map-icon-24.svg"
+									alt="Иконка локации"
+								/>
+								<span class="header__adress_text">Санкт-Петербург</span>
+							</a>
+							<a href="#" class="header__phone">
+								<img
+									class="header__icon"
+									src="/src/assets/img/header/call-icon-24.svg"
+									alt="Иконка телефона"
+								/>
+								<span class="header__phone_text">+7 (800) 941-34-28</span>
+							</a>
+
+							
+		
+							<div class="burger-menu">
+								<a href="#menu">
+									<mm-burger
+										menu="menu"
+										fx="collapse"
+										ease="elastic"
+										role="button"
+										tabindex="0"
+										title="Открыть меню"
+									>
+										<img
+											class="burger-menu__icon"
+											src="./assets/img/header/burger-menu-icon.svg"
+											alt="Иконка меню"
+										/>
+									</mm-burger>
+								</a>
+							</div>
+						</div>
 					</div>
+				</header>
+				
+			<div id="page">
 	
-					<div class="header__right-block">
-						<a href="#" class="header__adress">
+				<!-- Бургер-меню старое-->
+				<!-- <div class="wrapper menu">
+					<nav id="menu" class="menu container">
+						<ul class="menu__items">
+							<li class="menu__item">
+								<div class="menu__item_block">
+									<span class="menu__item_block-title">Услуги</span>
+									<img
+										class="menu__item_block-img"
+										src="./assets/img/arrows/arrow-down.svg"
+										alt="Открыть пункт меню"
+									/>
+								</div>
+								
+								<ul class="Vertical menu__item_list">
+									<li>
+										<a href="/services/invest/" class="menu__item_list-item">
+											Управление активами и инвестициями
+										</a>
+									</li>
+									<li>
+										<a href="/services/business/" class="menu__item_list-item">
+											Автоматизация бизнеса
+										</a>
+									</li>
+									<li>
+										<a href="/services/finances/" class="menu__item_list-item">
+											Финансовый аудит
+										</a>
+									</li>
+									<li>
+										<a href="/services/laywer/" class="menu__item_list-item">
+											Юридическая практика
+										</a>
+									</li>
+									<li>
+										<a href="/services/lising/" class="menu__item_list-item">
+											Лизинг
+										</a>
+									</li>
+									<li>
+										<a href="/services/careful/" class="menu__item_list-item">
+											Информационная безопасность
+										</a>
+									</li>
+								</ul>
+							</li>
+	
+							<li class="menu__item">
+								<div class="menu__item_block">
+									<span class="menu__item_block-title">Продукция</span>	
+									<img
+										class="menu__item_block-img"
+										src="./assets/img/arrows/arrow-down.svg"
+										alt="Открыть пункт меню"
+									/>
+								</div>
+								
+								<ul class="Vertical menu__item_list">
+									<li>
+										<a href="/products/item1/" class="menu__item_list-item">
+											Первый пункт
+										</a>
+									</li>
+									<li>
+										<a href="/products/item2/" class="menu__item_list-item">
+											Второй пункт
+										</a>
+									</li>
+									<li>
+										<a href="/products/item3/" class="menu__item_list-item">
+											Третий пункт
+										</a>
+									</li>
+								</ul>
+							</li>
+	
+							<li class="menu__item">
+								<div class="menu__item_block">
+									<span class="menu__item_block-title">
+										Проекты
+									</span>
+									<img
+										class="menu__item_block-img"
+										src="./assets/img/arrows/arrow-down.svg"
+										alt="Открыть пункт меню"
+									/>
+								</div>
+	
+								<ul class="Vertical menu__item_list">
+									<li>
+										<a href="/projects/item1/" class="menu__item_list-item">
+											Первый пункт
+										</a>
+									</li>
+									<li>
+										<a href="/projects/item2/" class="menu__item_list-item">
+											Второй пункт
+										</a>
+									</li>
+									<li>
+										<a href="/projects/item3/" class="menu__item_list-item">
+											Третий пункт
+										</a>
+									</li>
+								</ul>
+							</li>
+	
+							<li class="menu__item">
+								<div class="menu__item_block">
+									<span class="menu__item_block-title">
+										Компания
+									</span>
+									<img
+										class="menu__item_block-img"
+										src="./assets/img/arrows/arrow-down.svg"
+										alt="Открыть пункт меню"
+									/>
+								</div>
+	
+								<ul class="Vertical menu__item_list">
+									<li>
+										<a href="/company/item1/" class="menu__item_list-item">
+											Первый пункт
+										</a>
+									</li>
+									<li>
+										<a href="/company/item2/" class="menu__item_list-item">
+											Второй пункт
+										</a>
+									</li>
+								</ul>
+							</li>
+	
+							<li class="menu__item menu__item_hidden">
+								<div class="menu__item_block">
+									<span class="menu__item_block-title">
+										Пресс-центр
+									</span>
+								</div>
+							</li>
+							<li class="menu__item menu__item_hidden">
+								<div class="menu__item_block">
+									<span class="menu__item_block-title">
+										Контакты
+									</span>
+								</div>
+							</li>
+						</ul>
+	
+						<a href="#" class="menu__adress">
 							<img
-								class="header__icon"
+								class="menu__adress_icon"
 								src="/src/assets/img/header/map-icon-24.svg"
 								alt="Иконка локации"
 							/>
-							<span class="header__adress_text">Санкт-Петербург</span>
+							<span class="menu__adress_text">Санкт-Петербург</span>
 						</a>
-						<a href="#" class="header__phone">
+						<a href="#" class="menu__phone">
 							<img
-								class="header__icon"
+								class="menu__phone_icon"
 								src="/src/assets/img/header/call-icon-24.svg"
 								alt="Иконка телефона"
 							/>
-							<span class="header__phone_text">+7 (800) 941-34-28</span>
+							<span class="menu__phone_text">7 (800) 941-34-28</span>
 						</a>
+					</nav>
+				</div> -->
 	
-						<div class="burger-menu">
-							<a href="#menu">
-								<img
-									class="burger-menu__icon"
-									src="./assets/img/header/burger-menu-icon.svg"
-									alt="Иконка меню"
-								/>
-							</a>
-						</div>
-					</div>
-				</div>
-			</header>
-
-		<nav id="menu">
-			<ul>
-				<li>
-					<span>Услуги</span>
-					<ul>
-						<li><a href="#">Управление активами и инвестиции</a></li>
-						<li><a href="#">Автоматизация бизнеса</a></li>
-						<li><a href="#">Финансовый аудит</a</li>
-						<li><a href="#">Юридическая практика</a></li>
-						<li><a href="#">Лизинг</a></li>
-						<li><a href="#">Информационная безопасность</a></li>
-					</ul>
-				</li>
-	
-				<li>
-					<span>Продукция</span>
-					<ul>
-						<li><a href="#">Первый пункт</a></li>
-						<li><a href="#">Второй пункт</a></li>
-						<li><a href="#">Третий пункт</a></li>
-					</ul>
-				</li>
-
-				<li>
-					<span>Проекты</span>
-					<ul>
-						<li><a href="#">Первый пункт</a></li>
-						<li><a href="#">Второй пункт</a></li>
-						<li><a href="#">Третий пункт</a></li>
-					</ul>
-				</li>
-
-				<li>
-					<span>Компания</span>
-					<ul>
-						<li><a href="#">Первый пункт</a></li>
-						<li><a href="#">Второй пункт</a></li>
-						<li><a href="#">Третий пункт</a></li>
-					</ul>
-				</li>
-			</ul>	
-		</nav>
-
-			<!-- Бургер-меню -->
-			<!-- <div class="wrapper menu">
-				<nav id="menu" class="menu container">
-					<ul class="menu__items">
-						<li class="menu__item">
-							<div class="menu__item_block">
-								<span class="menu__item_block-title">Услуги</span>
-								<img
-									class="menu__item_block-img"
-									src="./assets/img/arrows/arrow-down.svg"
-									alt="Открыть пункт меню"
-								/>
-							</div>
-							
-							<ul class="Vertical menu__item_list">
-								<li>
-									<a href="/services/invest/" class="menu__item_list-item">
-										Управление активами и инвестициями
-									</a>
-								</li>
-								<li>
-									<a href="/services/business/" class="menu__item_list-item">
-										Автоматизация бизнеса
-									</a>
-								</li>
-								<li>
-									<a href="/services/finances/" class="menu__item_list-item">
-										Финансовый аудит
-									</a>
-								</li>
-								<li>
-									<a href="/services/laywer/" class="menu__item_list-item">
-										Юридическая практика
-									</a>
-								</li>
-								<li>
-									<a href="/services/lising/" class="menu__item_list-item">
-										Лизинг
-									</a>
-								</li>
-								<li>
-									<a href="/services/careful/" class="menu__item_list-item">
-										Информационная безопасность
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="menu__item">
-							<div class="menu__item_block">
-								<span class="menu__item_block-title">Продукция</span>	
-								<img
-									class="menu__item_block-img"
-									src="./assets/img/arrows/arrow-down.svg"
-									alt="Открыть пункт меню"
-								/>
-							</div>
-							
-							<ul class="Vertical menu__item_list">
-								<li>
-									<a href="/products/item1/" class="menu__item_list-item">
-										Первый пункт
-									</a>
-								</li>
-								<li>
-									<a href="/products/item2/" class="menu__item_list-item">
-										Второй пункт
-									</a>
-								</li>
-								<li>
-									<a href="/products/item3/" class="menu__item_list-item">
-										Третий пункт
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="menu__item">
-							<div class="menu__item_block">
-								<span class="menu__item_block-title">
-									Проекты
-								</span>
-								<img
-									class="menu__item_block-img"
-									src="./assets/img/arrows/arrow-down.svg"
-									alt="Открыть пункт меню"
-								/>
-							</div>
-
-							<ul class="Vertical menu__item_list">
-								<li>
-									<a href="/projects/item1/" class="menu__item_list-item">
-										Первый пункт
-									</a>
-								</li>
-								<li>
-									<a href="/projects/item2/" class="menu__item_list-item">
-										Второй пункт
-									</a>
-								</li>
-								<li>
-									<a href="/projects/item3/" class="menu__item_list-item">
-										Третий пункт
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="menu__item">
-							<div class="menu__item_block">
-								<span class="menu__item_block-title">
-									Компания
-								</span>
-								<img
-									class="menu__item_block-img"
-									src="./assets/img/arrows/arrow-down.svg"
-									alt="Открыть пункт меню"
-								/>
-							</div>
-
-							<ul class="Vertical menu__item_list">
-								<li>
-									<a href="/company/item1/" class="menu__item_list-item">
-										Первый пункт
-									</a>
-								</li>
-								<li>
-									<a href="/company/item2/" class="menu__item_list-item">
-										Второй пункт
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="menu__item menu__item_hidden">
-							<div class="menu__item_block">
-								<span class="menu__item_block-title">
-									Пресс-центр
-								</span>
-							</div>
-						</li>
-						<li class="menu__item menu__item_hidden">
-							<div class="menu__item_block">
-								<span class="menu__item_block-title">
-									Контакты
-								</span>
-							</div>
-						</li>
-					</ul>
-
-					<a href="#" class="menu__adress">
-						<img
-							class="menu__adress_icon"
-							src="/src/assets/img/header/map-icon-24.svg"
-							alt="Иконка локации"
-						/>
-						<span class="menu__adress_text">Санкт-Петербург</span>
-					</a>
-					<a href="#" class="menu__phone">
-						<img
-							class="menu__phone_icon"
-							src="/src/assets/img/header/call-icon-24.svg"
-							alt="Иконка телефона"
-						/>
-						<span class="menu__phone_text">7 (800) 941-34-28</span>
-					</a>
-				</nav>
-			</div> -->
-
-			<!-- Баннер -->
-			<div class="wrapper banner">
-				<div class="banner__background-dark">
-					<div class="item">
-						<div class="container banner__block">
-							<div class="banner__description">
-								<div
-									class="banner__owl-carousel owl-carousel owl-theme"
-								>
-									<div class="banner__description_text">
-										<span class="text_big-size">
-											Patriot — это ключ к успешному бизнесу
-											по всей территории РФ
-										</span>
-										<span class="text_small-size">
-											Роскошный, быстрый, практичный
-											автомобиль на выгодных условиях лизинга.
-											Станьте ближе к мечте и сократите налог
-											на имущество в три раза.
-										</span>
+				<div id="content">
+						<!-- Баннер -->
+					<div class="wrapper banner">
+						<div class="banner__background-dark">
+							<div class="item">
+								<div class="container banner__block">
+									<div class="banner__description">
+										<div
+											class="banner__owl-carousel owl-carousel owl-theme"
+										>
+											<div class="banner__description_text">
+												<span class="text_big-size">
+													Patriot — это ключ к успешному бизнесу
+													по всей территории РФ
+												</span>
+												<span class="text_small-size">
+													Роскошный, быстрый, практичный
+													автомобиль на выгодных условиях лизинга.
+													Станьте ближе к мечте и сократите налог
+													на имущество в три раза.
+												</span>
+											</div>
+		
+											<div class="banner__description_text">
+												<span class="text_big-size">
+													Patriot — это ключ к успешному бизнесу
+													по всей территории РФ
+												</span>
+												<span class="text_small-size">
+													Роскошный, быстрый, практичный
+													автомобиль на выгодных условиях лизинга.
+													Станьте ближе к мечте и сократите налог
+													на имущество в три раза.
+												</span>
+											</div>
+		
+											<div class="banner__description_text">
+												<span class="text_big-size">
+													Patriot — это ключ к успешному бизнесу
+													по всей территории РФ
+												</span>
+												<span class="text_small-size">
+													Роскошный, быстрый, практичный
+													автомобиль на выгодных условиях лизинга.
+													Станьте ближе к мечте и сократите налог
+													на имущество в три раза.
+												</span>
+											</div>
+										</div>
+		
+										<div class="arrows banner__arrows">
+											<button
+												class="arrows__item arrows__prev-banner"
+											>
+												<
+											</button>
+											<button
+												class="arrows__item arrows__next-banner"
+											>
+												>
+											</button>
+										</div>
 									</div>
-
-									<div class="banner__description_text">
-										<span class="text_big-size">
-											Patriot — это ключ к успешному бизнесу
-											по всей территории РФ
+		
+									<div class="feedback-form">
+										<h3 class="feedback-form__title">
+											Оставить заявку
+										</h3>
+										<span class="feedback-form__text">
+											Заполните форму и мы свяжемся с вами, чтобы
+											узнать детали вашего проекта.
 										</span>
-										<span class="text_small-size">
-											Роскошный, быстрый, практичный
-											автомобиль на выгодных условиях лизинга.
-											Станьте ближе к мечте и сократите налог
-											на имущество в три раза.
-										</span>
-									</div>
-
-									<div class="banner__description_text">
-										<span class="text_big-size">
-											Patriot — это ключ к успешному бизнесу
-											по всей территории РФ
-										</span>
-										<span class="text_small-size">
-											Роскошный, быстрый, практичный
-											автомобиль на выгодных условиях лизинга.
-											Станьте ближе к мечте и сократите налог
-											на имущество в три раза.
-										</span>
+		
+										<form
+											action="#"
+											class="feedback-form__block_wrapper"
+										>
+											<div class="feedback-form__block">
+												<label class="feedback-form__block_item">
+													Имя*
+													<input
+														required
+														name="name"
+														type="text"
+														class="item__input"
+													/>
+												</label>
+		
+												<div class="feedback-form__block_item">
+													Телефон*
+													<input
+														required
+														name="name"
+														type="tel"
+														class="item__input"
+													/>
+												</div>
+											</div>
+		
+											<div class="feedback-form__input_wrapper">
+												<div class="feedback-form__input_checkbox">
+													<input
+														id="info-transfer"
+														name="info-transfer"
+														type="checkbox"
+														class="checkbox_input"
+													/>
+													<label
+														for="info-transfer"
+														class="info-transfer"
+													>
+														Я принимаю
+														<a
+															href="#"
+															class="info-transfer__link"
+															>условия передачи информации</a
+														>
+													</label>
+												</div>
+												<button class="feedback-form__button">
+													Связаться с нами
+												</button>
+											</div>
+										</form>
 									</div>
 								</div>
-
-								<div class="arrows banner__arrows">
-									<button
-										class="arrows__item arrows__prev-banner"
-									>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Тарифы -->
+					<div class="wrapper rates">
+						<div class="container rates__block">
+							<div class="rates__top">
+								<h2 class="rates__top_title">Тарифы</h2>
+		
+								<div class="arrows">
+									<button class="arrows__item arrows__prev-rate">
 										<
 									</button>
-									<button
-										class="arrows__item arrows__next-banner"
-									>
+									<button class="arrows__item arrows__next-rate">
 										>
 									</button>
 								</div>
 							</div>
-
-							<div class="feedback-form">
-								<h3 class="feedback-form__title">
-									Оставить заявку
-								</h3>
-								<span class="feedback-form__text">
-									Заполните форму и мы свяжемся с вами, чтобы
-									узнать детали вашего проекта.
-								</span>
-
-								<form
-									action="#"
-									class="feedback-form__block_wrapper"
-								>
-									<div class="feedback-form__block">
-										<label class="feedback-form__block_item">
-											Имя*
-											<input
-												required
-												name="name"
-												type="text"
-												class="item__input"
-											/>
-										</label>
-
-										<div class="feedback-form__block_item">
-											Телефон*
-											<input
-												required
-												name="name"
-												type="tel"
-												class="item__input"
-											/>
+		
+							<div class="rates__tabs">
+								<div class="rates__owl-carousel owl-carousel owl-theme">
+									<div class="rates__tab">
+										<div class="rates__tab_title">
+											<div class="rates__tab_title-img-container">
+												<img
+													class="rates__tab_title-img"
+													src="../src/assets/img/rate-img.jpg"
+													alt="Изображение заголовка тарифа"
+												/>
+												<p class="rates__tab_title-text">Лайт</p>
+		
+												<div class="banners">
+													<div
+														class="banners__promotion banners__text"
+													>
+														<span>Акция</span>
+													</div>
+													<div class="banners__new banners__text">
+														<span>Новинка</span>
+													</div>
+													<div class="banners__hit banners__text">
+														<span>Хит</span>
+													</div>
+												</div>
+											</div>
 										</div>
-									</div>
-
-									<div class="feedback-form__input_wrapper">
-										<div class="feedback-form__input_checkbox">
-											<input
-												id="info-transfer"
-												name="info-transfer"
-												type="checkbox"
-												class="checkbox_input"
-											/>
-											<label
-												for="info-transfer"
-												class="info-transfer"
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Visa, Master Card, Мир
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Apple Pay, Android Pay
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Электронные кошельки
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission">
+											<p class="rates__tab_font">Оборот</p>
+											<p class="rates__tab_font-bold">
+												От 0 до 200 т.р.
+											</p>
+										</div>
+										<div class="rates__tab_price">
+											<span class="rates__tab_price-font-bold"
+												>120 000 ₽</span
 											>
-												Я принимаю
-												<a
-													href="#"
-													class="info-transfer__link"
-													>условия передачи информации</a
-												>
-											</label>
+											<button class="rates__tab_price-button">
+												Оплатить
+											</button>
 										</div>
-										<button class="feedback-form__button">
-											Связаться с нами
-										</button>
 									</div>
-								</form>
+		
+									<div class="rates__tab">
+										<div class="rates__tab_title">
+											<div class="rates__tab_title-img-container">
+												<img
+													class="rates__tab_title-img"
+													src="../src/assets/img/rate-img.jpg"
+													alt="Изображение заголовка тарифа"
+												/>
+												<p class="rates__tab_title-text">Лайт</p>
+		
+												<div class="banners">
+													<div
+														class="banners__promotion banners__text"
+													>
+														<span>Акция</span>
+													</div>
+													<div class="banners__hit banners__text">
+														<span>Хит</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Visa, Master Card, Мир
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Apple Pay, Android Pay
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Электронные кошельки
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission">
+											<p class="rates__tab_font">Оборот</p>
+											<p class="rates__tab_font-bold">
+												От 0 до 200 т.р.
+											</p>
+										</div>
+										<div class="rates__tab_price">
+											<div class="rates__tab_prices">
+												<span class="rates__tab_price-font-bold">
+													120 000 ₽
+												</span>
+												<span
+													class="rates__tab_price-font-bold-old"
+												>
+													125 500 ₽
+												</span>
+											</div>
+											<button class="rates__tab_price-button">
+												Оплатить
+											</button>
+										</div>
+									</div>
+		
+									<div class="rates__tab">
+										<div class="rates__tab_title">
+											<div class="rates__tab_title-img-container">
+												<img
+													class="rates__tab_title-img"
+													src="../src/assets/img/rate-img.jpg"
+													alt="Изображение заголовка тарифа"
+												/>
+												<p class="rates__tab_title-text">Лайт</p>
+		
+												<div class="banners">
+													<div
+														class="banners__promotion banners__text"
+													>
+														<span>Акция</span>
+													</div>
+													<div class="banners__new banners__text">
+														<span>Новинка</span>
+													</div>
+													<div class="banners__hit banners__text">
+														<span>Хит</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Visa, Master Card, Мир
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Apple Pay, Android Pay
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Электронные кошельки
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission">
+											<p class="rates__tab_font">Оборот</p>
+											<p class="rates__tab_font-bold">
+												От 0 до 200 т.р.
+											</p>
+										</div>
+										<div class="rates__tab_price">
+											<span class="rates__tab_price-font-bold"
+												>120 000 ₽</span
+											>
+											<button class="rates__tab_price-button">
+												Оплатить
+											</button>
+										</div>
+									</div>
+		
+									<div class="rates__tab">
+										<div class="rates__tab_title">
+											<div class="rates__tab_title-img-container">
+												<img
+													class="rates__tab_title-img"
+													src="../src/assets/img/rate-img.jpg"
+													alt="Изображение заголовка тарифа"
+												/>
+												<p class="rates__tab_title-text">Лайт</p>
+		
+												<div class="banners">
+													<div
+														class="banners__promotion banners__text"
+													>
+														<span>Акция</span>
+													</div>
+													<div class="banners__new banners__text">
+														<span>Новинка</span>
+													</div>
+													<div class="banners__hit banners__text">
+														<span>Хит</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Visa, Master Card, Мир
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Apple Pay, Android Pay
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Электронные кошельки
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission">
+											<p class="rates__tab_font">Оборот</p>
+											<p class="rates__tab_font-bold">
+												От 0 до 200 т.р.
+											</p>
+										</div>
+										<div class="rates__tab_price">
+											<span class="rates__tab_price-font-bold"
+												>120 000 ₽</span
+											>
+											<button class="rates__tab_price-button">
+												Оплатить
+											</button>
+										</div>
+									</div>
+		
+									<div class="rates__tab">
+										<div class="rates__tab_title">
+											<div class="rates__tab_title-img-container">
+												<img
+													class="rates__tab_title-img"
+													src="../src/assets/img/rate-img.jpg"
+													alt="Изображение заголовка тарифа"
+												/>
+												<p class="rates__tab_title-text">Лайт</p>
+		
+												<div class="banners">
+													<div
+														class="banners__promotion banners__text"
+													>
+														<span>Акция</span>
+													</div>
+													<div class="banners__new banners__text">
+														<span>Новинка</span>
+													</div>
+													<div class="banners__hit banners__text">
+														<span>Хит</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Visa, Master Card, Мир
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Apple Pay, Android Pay
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Электронные кошельки
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission">
+											<p class="rates__tab_font">Оборот</p>
+											<p class="rates__tab_font-bold">
+												От 0 до 200 т.р.
+											</p>
+										</div>
+										<div class="rates__tab_price">
+											<span class="rates__tab_price-font-bold"
+												>120 000 ₽</span
+											>
+											<button class="rates__tab_price-button">
+												Оплатить
+											</button>
+										</div>
+									</div>
+		
+									<div class="rates__tab">
+										<div class="rates__tab_title">
+											<div class="rates__tab_title-img-container">
+												<img
+													class="rates__tab_title-img"
+													src="../src/assets/img/rate-img.jpg"
+													alt="Изображение заголовка тарифа"
+												/>
+												<p class="rates__tab_title-text">Лайт</p>
+		
+												<div class="banners">
+													<div
+														class="banners__promotion banners__text"
+													>
+														<span>Акция</span>
+													</div>
+													<div class="banners__new banners__text">
+														<span>Новинка</span>
+													</div>
+													<div class="banners__hit banners__text">
+														<span>Хит</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Visa, Master Card, Мир
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Apple Pay, Android Pay
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Электронные кошельки
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission">
+											<p class="rates__tab_font">Оборот</p>
+											<p class="rates__tab_font-bold">
+												От 0 до 200 т.р.
+											</p>
+										</div>
+										<div class="rates__tab_price">
+											<span class="rates__tab_price-font-bold"
+												>120 000 ₽</span
+											>
+											<button class="rates__tab_price-button">
+												Оплатить
+											</button>
+										</div>
+									</div>
+		
+									<div class="rates__tab">
+										<div class="rates__tab_title">
+											<div class="rates__tab_title-img-container">
+												<img
+													class="rates__tab_title-img"
+													src="../src/assets/img/rate-img.jpg"
+													alt="Изображение заголовка тарифа"
+												/>
+												<p class="rates__tab_title-text">Лайт</p>
+		
+												<div class="banners">
+													<div
+														class="banners__promotion banners__text"
+													>
+														<span>Акция</span>
+													</div>
+													<div class="banners__new banners__text">
+														<span>Новинка</span>
+													</div>
+													<div class="banners__hit banners__text">
+														<span>Хит</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Visa, Master Card, Мир
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Apple Pay, Android Pay
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission border-bottom">
+											<p class="rates__tab_font">
+												Электронные кошельки
+											</p>
+											<p class="rates__tab_font-bold">3,7%</p>
+										</div>
+										<div class="rates__tab_comission">
+											<p class="rates__tab_font">Оборот</p>
+											<p class="rates__tab_font-bold">
+												От 0 до 200 т.р.
+											</p>
+										</div>
+										<div class="rates__tab_price">
+											<span class="rates__tab_price-font-bold"
+												>120 000 ₽</span
+											>
+											<button class="rates__tab_price-button">
+												Оплатить
+											</button>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
+					</div>	
 				</div>
 			</div>
 
-			<!-- Тарифы -->
-			<div class="wrapper rates">
-				<div class="container rates__block">
-					<div class="rates__top">
-						<h2 class="rates__top_title">Тарифы</h2>
+			<nav id="menu" class="menu">
+				<ul class="Vertical menu__items">
+					<li class="menu__item">
+						<span class="menu__item_title">Услуги</span>
+						<ul class="Vertical">
+							<li><a href="#" class="menu__item_suptitle">
+								Управление активами и инвестиции
+							</a></li>
+							<li><a href="#" class="menu__item_suptitle">
+								Автоматизация бизнеса
+							</a></li>
+							<li><a href="#" class="menu__item_suptitle">
+								Финансовый аудит
+							</a</li>
+							<li><a href="#" class="menu__item_suptitle">
+								Юридическая практика
+							</a></li>
+							<li><a href="#" class="menu__item_suptitle">
+								Лизинг
+							</a></li>
+							<li><a href="#" class="menu__item_suptitle">
+								Информационная безопасность
+							</a></li>
+						</ul>
+					</li>
+		
+					<li class="menu__item">
+						<span class="menu__item_title">Продукция</span>
+						<ul class="Vertical">
+							<li><a href="#" class="menu__item_suptitle">
+								Первый пункт
+							</a></li>
+							<li><a href="#" class="menu__item_suptitle">
+								Второй пункт
+							</a></li>
+							<li><a href="#" class="menu__item_suptitle">
+								Третий пункт
+							</a></li>
+						</ul>
+					</li>
 
-						<div class="arrows">
-							<button class="arrows__item arrows__prev-rate">
-								<
-							</button>
-							<button class="arrows__item arrows__next-rate">
-								>
-							</button>
-						</div>
-					</div>
+					<li class="menu__item">
+						<span class="menu__item_title">Проекты</span>
+						<ul class="Vertical">
+							<li><a href="#" class="menu__item_suptitle">
+								Первый пункт
+							</a></li>
+							<li><a href="#" class="menu__item_suptitle">
+								Второй пункт
+							</a></li>
+							<li><a href="#" class="menu__item_suptitle">
+								Третий пункт
+							</a></li>
+						</ul>
+					</li>
 
-					<div class="rates__tabs">
-						<div class="rates__owl-carousel owl-carousel owl-theme">
-							<div class="rates__tab">
-								<div class="rates__tab_title">
-									<div class="rates__tab_title-img-container">
-										<img
-											class="rates__tab_title-img"
-											src="../src/assets/img/rate-img.jpg"
-											alt="Изображение заголовка тарифа"
-										/>
-										<p class="rates__tab_title-text">Лайт</p>
+					<li class="menu__item">
+						<span class="menu__item_title">Компания</span>
+						<ul class="Vertical">
+							<li><a href="#" class="menu__item_suptitle">
+								Первый пункт
+							</a></li>
+							<li><a href="#" class="menu__item_suptitle">
+								Второй пункт
+							</a></li>
+						</ul>
+					</li>
 
-										<div class="banners">
-											<div
-												class="banners__promotion banners__text"
-											>
-												<span>Акция</span>
-											</div>
-											<div class="banners__new banners__text">
-												<span>Новинка</span>
-											</div>
-											<div class="banners__hit banners__text">
-												<span>Хит</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Visa, Master Card, Мир
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Apple Pay, Android Pay
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Электронные кошельки
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission">
-									<p class="rates__tab_font">Оборот</p>
-									<p class="rates__tab_font-bold">
-										От 0 до 200 т.р.
-									</p>
-								</div>
-								<div class="rates__tab_price">
-									<span class="rates__tab_price-font-bold"
-										>120 000 ₽</span
-									>
-									<button class="rates__tab_price-button">
-										Оплатить
-									</button>
-								</div>
-							</div>
+					<li class="menu__item">
+						<span class="menu__item_title">Контакты</span>
+					</li>
 
-							<div class="rates__tab">
-								<div class="rates__tab_title">
-									<div class="rates__tab_title-img-container">
-										<img
-											class="rates__tab_title-img"
-											src="../src/assets/img/rate-img.jpg"
-											alt="Изображение заголовка тарифа"
-										/>
-										<p class="rates__tab_title-text">Лайт</p>
+					<li class="menu__item">
+						<span class="menu__item_title">Пресс-центр</span>
+					</li>
 
-										<div class="banners">
-											<div
-												class="banners__promotion banners__text"
-											>
-												<span>Акция</span>
-											</div>
-											<div class="banners__hit banners__text">
-												<span>Хит</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Visa, Master Card, Мир
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Apple Pay, Android Pay
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Электронные кошельки
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission">
-									<p class="rates__tab_font">Оборот</p>
-									<p class="rates__tab_font-bold">
-										От 0 до 200 т.р.
-									</p>
-								</div>
-								<div class="rates__tab_price">
-									<div class="rates__tab_prices">
-										<span class="rates__tab_price-font-bold">
-											120 000 ₽
-										</span>
-										<span
-											class="rates__tab_price-font-bold-old"
-										>
-											125 500 ₽
-										</span>
-									</div>
-									<button class="rates__tab_price-button">
-										Оплатить
-									</button>
-								</div>
-							</div>
+					<li class="menu__item">
+						<a href="#" class="menu__adress">
+							<img
+								class="menu__adress_icon"
+								src="/src/assets/img/header/map-icon-24.svg"
+								alt="Иконка локации"
+							/>
+							<span class="menu__adress_text">Санкт-Петербург</span>
+						</a>
+					</li>
 
-							<div class="rates__tab">
-								<div class="rates__tab_title">
-									<div class="rates__tab_title-img-container">
-										<img
-											class="rates__tab_title-img"
-											src="../src/assets/img/rate-img.jpg"
-											alt="Изображение заголовка тарифа"
-										/>
-										<p class="rates__tab_title-text">Лайт</p>
+					<li class="menu__item">
+						<a href="#" class="menu__phone">
+							<img
+								class="menu__phone_icon"
+								src="/src/assets/img/header/call-icon-24.svg"
+								alt="Иконка телефона"
+							/>
+							<span class="menu__phone_text">+7 (800) 941-34-28</span>
+						</a>
+					</li>
+				</ul>	
+			</nav>
 
-										<div class="banners">
-											<div
-												class="banners__promotion banners__text"
-											>
-												<span>Акция</span>
-											</div>
-											<div class="banners__new banners__text">
-												<span>Новинка</span>
-											</div>
-											<div class="banners__hit banners__text">
-												<span>Хит</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Visa, Master Card, Мир
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Apple Pay, Android Pay
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Электронные кошельки
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission">
-									<p class="rates__tab_font">Оборот</p>
-									<p class="rates__tab_font-bold">
-										От 0 до 200 т.р.
-									</p>
-								</div>
-								<div class="rates__tab_price">
-									<span class="rates__tab_price-font-bold"
-										>120 000 ₽</span
-									>
-									<button class="rates__tab_price-button">
-										Оплатить
-									</button>
-								</div>
-							</div>
-
-							<div class="rates__tab">
-								<div class="rates__tab_title">
-									<div class="rates__tab_title-img-container">
-										<img
-											class="rates__tab_title-img"
-											src="../src/assets/img/rate-img.jpg"
-											alt="Изображение заголовка тарифа"
-										/>
-										<p class="rates__tab_title-text">Лайт</p>
-
-										<div class="banners">
-											<div
-												class="banners__promotion banners__text"
-											>
-												<span>Акция</span>
-											</div>
-											<div class="banners__new banners__text">
-												<span>Новинка</span>
-											</div>
-											<div class="banners__hit banners__text">
-												<span>Хит</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Visa, Master Card, Мир
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Apple Pay, Android Pay
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Электронные кошельки
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission">
-									<p class="rates__tab_font">Оборот</p>
-									<p class="rates__tab_font-bold">
-										От 0 до 200 т.р.
-									</p>
-								</div>
-								<div class="rates__tab_price">
-									<span class="rates__tab_price-font-bold"
-										>120 000 ₽</span
-									>
-									<button class="rates__tab_price-button">
-										Оплатить
-									</button>
-								</div>
-							</div>
-
-							<div class="rates__tab">
-								<div class="rates__tab_title">
-									<div class="rates__tab_title-img-container">
-										<img
-											class="rates__tab_title-img"
-											src="../src/assets/img/rate-img.jpg"
-											alt="Изображение заголовка тарифа"
-										/>
-										<p class="rates__tab_title-text">Лайт</p>
-
-										<div class="banners">
-											<div
-												class="banners__promotion banners__text"
-											>
-												<span>Акция</span>
-											</div>
-											<div class="banners__new banners__text">
-												<span>Новинка</span>
-											</div>
-											<div class="banners__hit banners__text">
-												<span>Хит</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Visa, Master Card, Мир
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Apple Pay, Android Pay
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Электронные кошельки
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission">
-									<p class="rates__tab_font">Оборот</p>
-									<p class="rates__tab_font-bold">
-										От 0 до 200 т.р.
-									</p>
-								</div>
-								<div class="rates__tab_price">
-									<span class="rates__tab_price-font-bold"
-										>120 000 ₽</span
-									>
-									<button class="rates__tab_price-button">
-										Оплатить
-									</button>
-								</div>
-							</div>
-
-							<div class="rates__tab">
-								<div class="rates__tab_title">
-									<div class="rates__tab_title-img-container">
-										<img
-											class="rates__tab_title-img"
-											src="../src/assets/img/rate-img.jpg"
-											alt="Изображение заголовка тарифа"
-										/>
-										<p class="rates__tab_title-text">Лайт</p>
-
-										<div class="banners">
-											<div
-												class="banners__promotion banners__text"
-											>
-												<span>Акция</span>
-											</div>
-											<div class="banners__new banners__text">
-												<span>Новинка</span>
-											</div>
-											<div class="banners__hit banners__text">
-												<span>Хит</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Visa, Master Card, Мир
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Apple Pay, Android Pay
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Электронные кошельки
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission">
-									<p class="rates__tab_font">Оборот</p>
-									<p class="rates__tab_font-bold">
-										От 0 до 200 т.р.
-									</p>
-								</div>
-								<div class="rates__tab_price">
-									<span class="rates__tab_price-font-bold"
-										>120 000 ₽</span
-									>
-									<button class="rates__tab_price-button">
-										Оплатить
-									</button>
-								</div>
-							</div>
-
-							<div class="rates__tab">
-								<div class="rates__tab_title">
-									<div class="rates__tab_title-img-container">
-										<img
-											class="rates__tab_title-img"
-											src="../src/assets/img/rate-img.jpg"
-											alt="Изображение заголовка тарифа"
-										/>
-										<p class="rates__tab_title-text">Лайт</p>
-
-										<div class="banners">
-											<div
-												class="banners__promotion banners__text"
-											>
-												<span>Акция</span>
-											</div>
-											<div class="banners__new banners__text">
-												<span>Новинка</span>
-											</div>
-											<div class="banners__hit banners__text">
-												<span>Хит</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Visa, Master Card, Мир
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Apple Pay, Android Pay
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission border-bottom">
-									<p class="rates__tab_font">
-										Электронные кошельки
-									</p>
-									<p class="rates__tab_font-bold">3,7%</p>
-								</div>
-								<div class="rates__tab_comission">
-									<p class="rates__tab_font">Оборот</p>
-									<p class="rates__tab_font-bold">
-										От 0 до 200 т.р.
-									</p>
-								</div>
-								<div class="rates__tab_price">
-									<span class="rates__tab_price-font-bold"
-										>120 000 ₽</span
-									>
-									<button class="rates__tab_price-button">
-										Оплатить
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
+			<div id="lightbox"></div>
 		</div>
 		
 
@@ -884,5 +952,6 @@
 		<script src="scripts/owl.carousel.min.js"></script>
 		<script src="scripts/owl.carousel.script.js"></script>
 		<script src="./assets/mmenu/mmenu.js"></script>
+		<script src="scripts/modules/menu.js"></script>
 	</body>
 </html>
