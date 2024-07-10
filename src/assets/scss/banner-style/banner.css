@@ -124,6 +124,9 @@
 }
 
 @media (max-width: 1440px) {
+  .banner .banner__block {
+    margin-top: 71px;
+  }
   .banner .banner__block .banner__description {
     max-width: 555px;
     height: 430px;
@@ -251,6 +254,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 51px;
   }
   .banner .banner__block .banner__description {
     align-self: center;
