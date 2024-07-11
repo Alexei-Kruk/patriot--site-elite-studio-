@@ -1,9 +1,32 @@
 {
+  "type": "module",
+  "name": "patriot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+		"last 2 chrome versions",
+		"last 2 firefox versions",
+		"last 2 ios versions",
+		"> 1%"
+	],
+  "description": "",
   "dependencies": {
     "jquery": "^3.7.1",
     "mburger-webcomponent": "^3.1.4",
     "mmenu-js": "^9.3.0",
     "node-modules": "^1.0.1",
     "owl.carousel": "^2.3.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
   }
 }

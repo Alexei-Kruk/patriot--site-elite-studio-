@@ -1,71 +1,44 @@
-import { closeModal, openModal } from './modal';
-import { postData } from '../services/services';
+function forms() {
+	const forms = document.querySelectorAll('form');
 
-
-function forms(formsSelector, modalTimerId) {
-	const forms = document.querySelectorAll(formsSelector);
 	const message = {
-		loading: '../../img/spinner.svg',
+		loading: '/src/assets/img/spinner.svg',
 		success: 'Спасибо! Скоро мы с вами свяжемся',
 		failure: 'Что-то пошло не так...',
 	};
 
 	forms.forEach(item => {
-		bindPostData(item);
+		postData(item);
 	});
 
-	function bindPostData(form) {
+	function postData(form) {
 		form.addEventListener('submit', e => {
 			e.preventDefault();
 
-			let statusMessage = document.createElement('img');
-			statusMessage.src = message.loading;
-			statusMessage.style.cssText = `
-                display: block;
-                margin: 0 auto;
-            `;
-			form.insertAdjacentElement('afterend', statusMessage);
+			let statusMessage = document.createElement('div');
+			statusMessage.classList.add('status');
+			statusMessage.textContent = message.loading;
+			form.append(statusMessage);
+
+			const requests = new XMLHttpRequest();
+			requests.open('POST', 'server.php');
+			// requests.setRequestHeader('Content-type', 'multipart/form-data');
 
 			const formData = new FormData(form);
+			requests.send(formData);
 
-			const json = JSON.stringify(Object.fromEntries(formData.entries()));
-
-			postData('http://localhost:3000/requests', json)
-				.then(data => {
-					console.log(data);
-					showThanksModal(message.success);
-					statusMessage.remove();
-				})
-				.catch(() => {
-					showThanksModal(message.failure);
-				})
-				.finally(() => {
+			requests.addEventListener('load', () => {
+				if (requests.status === 200) {
+					console.log(requests.response);
+					statusMessage.textContent = message.success;
 					form.reset();
-				});
+				} else {
+					statusMessage.textContent = message.failure;
+				}
+			});
+
+
 		});
-	}
-
-	function showThanksModal(message) {
-		const prevModalDialog = document.querySelector('.modal__dialog');
-
-		prevModalDialog.classList.add('hide');
-		openModal('.modal', modalTimerId);
-
-		const thanksModal = document.createElement('div');
-		thanksModal.classList.add('modal__dialog');
-		thanksModal.innerHTML = `
-            <div class="modal__content">
-                <div class="modal__close" data-close>×</div>
-                <div class="modal__title">${message}</div>
-            </div>
-        `;
-		document.querySelector('.modal').append(thanksModal);
-		setTimeout(() => {
-			thanksModal.remove();
-			prevModalDialog.classList.add('show');
-			prevModalDialog.classList.remove('hide');
-			closeModal('.modal');
-		}, 4000);
 	}
 }
 
