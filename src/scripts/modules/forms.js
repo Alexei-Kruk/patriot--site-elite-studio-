@@ -1,4 +1,4 @@
-function forms() {
+// function forms() {
 	const forms = document.querySelectorAll('form');
 
 	const message = {

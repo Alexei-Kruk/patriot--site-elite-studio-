@@ -179,7 +179,7 @@
 													required
 													name="name"
 													type="text"
-													class="item__input"
+													class="item__input _req _error"
 												/>
 											</label>
 
@@ -189,9 +189,9 @@
 												Телефон*
 												<input
 													required
-													name="name"
+													name="phone"
 													type="tel"
-													class="item__input"
+													class="item__input _req _phone _error"
 												/>
 											</div>
 										</div>
@@ -203,10 +203,11 @@
 												class="feedback-form__input_checkbox"
 											>
 												<input
+													required
 													id="info-transfer"
 													name="info-transfer"
 													type="checkbox"
-													class="checkbox_input"
+													class="checkbox_input _req _error"
 												/>
 												<label
 													for="info-transfer"
@@ -222,6 +223,7 @@
 												</label>
 											</div>
 											<button
+												type="submit"
 												class="feedback-form__button"
 											>
 												Связаться с нами
@@ -842,6 +844,8 @@
 		<script src="./assets/mmenu/mmenu.js"></script>
 		<script src="scripts/modules/menu.js"></script>
 		<!-- <script src="scripts/script.js"></script> -->
-		 <script src="index.js"></script>
+		<!-- <script src="index.js"></script> -->
+		<script src="scripts/mail.js"></script>
+		<script src="scripts/modules/hamburger.js"></script>
 	</body>
 </html>

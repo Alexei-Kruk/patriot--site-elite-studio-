@@ -1,7 +1,4 @@
 <?php
-// $_POST = json_decode( file_get_contents("php://input"), true );
-// echo var_dump($_POST);
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -27,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$mail->SMTPAuth   = true;                             
 		$mail->Username   = 'alexei.kruk.dev@gmail.com';                
 		$mail->Password   = 'jjtx haxx hlsd cuky';               
-		$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+		$mail->SMTPSecure = PHPMailer::SSL;
 		$mail->Port       = 465;
 	
 		// Получатели

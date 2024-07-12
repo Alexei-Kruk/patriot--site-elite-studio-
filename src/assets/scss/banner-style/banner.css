@@ -48,6 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  position: relative;
 }
 .banner .banner__block .feedback-form__title {
   font-size: 32px;
@@ -59,6 +60,23 @@
   margin: 10px 0 25px;
   max-width: 407px;
   line-height: 25px;
+}
+.banner .banner__block .feedback-form::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5) url("../../img/spinner.svg") center/50px no-repeat;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  visibility: hidden;
+}
+.banner .banner__block .feedback-form._sending::after {
+  opacity: 1;
+  visibility: visible;
 }
 .banner .banner__block .feedback-form__block_wrapper {
   display: flex;
@@ -121,6 +139,7 @@
   border-radius: 10px;
   font-size: 16px;
   font-family: var(--font-medium);
+  cursor: pointer;
 }
 
 @media (max-width: 1440px) {
@@ -322,4 +341,7 @@
     height: 44px;
     font-size: 14px;
   }
+}
+._error {
+  box-shadow: 0 0 15px #f00;
 }/*# sourceMappingURL=banner.css.map */

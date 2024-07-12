@@ -1,4 +1,4 @@
-function hamburger() {
+// function hamburger() {
 	document.querySelector('.burger').addEventListener('click', function () {
 		var menu = document.querySelector('.menu');
 		this.classList.toggle('active');
@@ -18,7 +18,7 @@ function hamburger() {
 			e.target.style.display = 'none';
 		}
 	});
-}
+// }
 
-export default hamburger;
+// export default hamburger;
 
