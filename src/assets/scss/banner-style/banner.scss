@@ -117,7 +117,7 @@
 							background-color: var(--input-color);
 							border-radius: 10px;
 							border: var(--border-color) 1px solid;
-							font-size: 30px;
+							font-size: 24px;
 							padding: 0 20px;
 						}
 					}
@@ -163,6 +163,10 @@
 					font-size: 16px;
 					font-family: var(--font-medium);
 					cursor: pointer;
+
+					&:active {
+						background-color: var(--primary-color-active);
+					}
 				}
 			}
 		}

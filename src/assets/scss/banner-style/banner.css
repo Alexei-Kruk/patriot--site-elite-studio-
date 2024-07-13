@@ -102,7 +102,7 @@
   background-color: var(--input-color);
   border-radius: 10px;
   border: var(--border-color) 1px solid;
-  font-size: 30px;
+  font-size: 24px;
   padding: 0 20px;
 }
 .banner .banner__block .feedback-form__input_wrapper .feedback-form__input_checkbox {
@@ -140,6 +140,9 @@
   font-size: 16px;
   font-family: var(--font-medium);
   cursor: pointer;
+}
+.banner .banner__block .feedback-form__input_wrapper .feedback-form__button:active {
+  background-color: var(--primary-color-active);
 }
 
 @media (max-width: 1440px) {

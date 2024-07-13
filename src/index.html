@@ -29,6 +29,7 @@
 		<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
 		<link rel="stylesheet" href="./assets/mmenu/mmenu.css" />
 		<link rel="stylesheet" href="./assets/css/menu.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 		<link rel="stylesheet" href="./assets/scss/general-style/general.css" />
 	</head>
 
@@ -167,7 +168,8 @@
 									</span>
 
 									<form
-										action="#"
+										action="php/server.php"
+										method="post"
 										class="feedback-form__block_wrapper"
 									>
 										<div class="feedback-form__block">
@@ -179,7 +181,7 @@
 													required
 													name="name"
 													type="text"
-													class="item__input _req _error"
+													class="item__input _req"
 												/>
 											</label>
 
@@ -191,7 +193,7 @@
 													required
 													name="phone"
 													type="tel"
-													class="item__input _req _phone _error"
+													class="item__input _req _phone"
 												/>
 											</div>
 										</div>
@@ -207,7 +209,7 @@
 													id="info-transfer"
 													name="info-transfer"
 													type="checkbox"
-													class="checkbox_input _req _error"
+													class="checkbox_input _req"
 												/>
 												<label
 													for="info-transfer"
@@ -843,6 +845,7 @@
 		<script src="scripts/owl.carousel.script.js"></script>
 		<script src="./assets/mmenu/mmenu.js"></script>
 		<script src="scripts/modules/menu.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 		<!-- <script src="scripts/script.js"></script> -->
 		<!-- <script src="index.js"></script> -->
 		<script src="scripts/mail.js"></script>

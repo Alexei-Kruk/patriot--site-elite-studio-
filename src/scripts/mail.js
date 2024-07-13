@@ -1,73 +1,42 @@
-"use strict";
+const ERROR_MESSAGE = 'Some Error!';
+const SUCCESS_MESSAGE = 'Successfuly send!';
+let colorMessage;
 
-document.addEventListener('DOMContentLoaded', function () {
-	const form = document.querySelector('form');
-	form.addEventListener('submit', formSend);
+const form = document.querySelector('form');
+form.addEventListener('submit', formSend);
 
-	async function formSend(e) {
-		e.preventDefault();
+async function formSend(e) {
+	e.preventDefault();
+	const formData = new FormData(form);
 
-		let error = formValidate(form);
+	let response = await fetch('php/server.php', {
+		method: 'POST',
+		body: formData,
+		mode: 'no-cors',
+	});
 
-		let formData = new FormData(form);
-
-		if (error === 0) {
-			form.classList.add('_sending');
-			let response = await fetch('server.php', {
-				method: 'POST',
-				body: formData
-			});
-			if (response.ok) {
-				let result = await response.json();
-				console.log('done');
-				alert(result.message);
-				form.reset();
-				form.classList.remove('_sending');
-			} else {
-				alert("Error");
-				console.log('Error');
-				form.classList.remove('_sending');
-			}
-		}
+	if (response.ok) {
+		colorMessage = 'linear-gradient(to right, #00b09b, #96c93d)';
+		showTostMessage(SUCCESS_MESSAGE, colorMessage);
+		form.reset();
+	} else {
+		colorMessage = 'linear-gradient(to right, red, red)';
+		showTostMessage(ERROR_MESSAGE, colorMessage);
 	}
+}
 
-	function formValidate(form) {
-		let error = 0;
-		let formReq = document.querySelectorAll('._req');
-		for (let index = 0; index < formReq.length; index++) {
-			const input = formReq[index];
-			formRemoveError(input);
-
-			if (input.classList.contains('_phone')) {
-				if (phoneTest(input)) {
-					formAddError(input);
-					error++;
-				}
-			} else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
-				formAddError(input);
-				error++;
-			} else {
-				if (input.value === '') {
-					formAddError(input);
-					error++;
-				}
-			}
-		}
-		return error;
-	}
-
-	function formAddError(input) {
-		input.parentElement.classList.add('_error');
-		input.classList.add('_error');
-	}
-
-	function formRemoveError(input) {
-		input.parentElement.classList.remove('_error');
-		input.classList.remove('_error');
-	}
-
-	function phoneTest(input) {
-		const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-		return re.test(String(input).toLowerCase());
-	}
-});
+function showTostMessage(message, colorMessage) {
+	Toastify({
+		text: message,
+		duration: 5000,
+		newWindow: true,
+		className: 'toast-message',
+		close: true,
+		gravity: 'top',
+		position: 'center',
+		stopOnFocus: true,
+		style: {
+			background: colorMessage,
+		},
+	}).showToast();
+}
