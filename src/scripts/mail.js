@@ -1,5 +1,6 @@
-const ERROR_MESSAGE = 'Some Error!';
-const SUCCESS_MESSAGE = 'Successfuly send!';
+const ERROR_MESSAGE = 'Произошла ошибка';
+const SENDING_MESSAGE = 'Отправка...';
+const SUCCESS_MESSAGE = 'Отправлено успешно';
 let colorMessage;
 
 const form = document.querySelector('form');
@@ -7,20 +8,27 @@ form.addEventListener('submit', formSend);
 
 async function formSend(e) {
 	e.preventDefault();
+
+	if (!validateForm()) {
+        return;
+    }
+
+	showTostMessage(SENDING_MESSAGE, 'linear-gradient(to right, #ffcc00, #ffcc00)');
+
 	const formData = new FormData(form);
 
-	let response = await fetch('php/server.php', {
+	let response = await fetch('php/emailSend.php', {
 		method: 'POST',
 		body: formData,
 		mode: 'no-cors',
 	});
 
 	if (response.ok) {
-		colorMessage = 'linear-gradient(to right, #00b09b, #96c93d)';
+		colorMessage = 'linear-gradient(to right, #3E58E2, #2f45a1)';
 		showTostMessage(SUCCESS_MESSAGE, colorMessage);
 		form.reset();
 	} else {
-		colorMessage = 'linear-gradient(to right, red, red)';
+		colorMessage = 'linear-gradient(to right, #ff2929, #ff2929)';
 		showTostMessage(ERROR_MESSAGE, colorMessage);
 	}
 }
@@ -28,15 +36,42 @@ async function formSend(e) {
 function showTostMessage(message, colorMessage) {
 	Toastify({
 		text: message,
-		duration: 5000,
+		duration: 2000,
 		newWindow: true,
 		className: 'toast-message',
 		close: true,
-		gravity: 'top',
+		gravity: 'center',
 		position: 'center',
 		stopOnFocus: true,
 		style: {
 			background: colorMessage,
+			borderRadius: '10px',
 		},
 	}).showToast();
+}
+
+function validateForm() {
+    const name = form.querySelector('input[name="name"]').value.trim();
+    const phone = form.querySelector('input[name="phone"]').value.trim();
+    const checkbox = form.querySelector('input[name="checkbox"]').checked;
+
+    const nameRegex = /^[A-Za-zА-Яа-яЁё]+$/;
+    const phoneRegex = /^[0-9+\-()]+$/;
+
+    if (!nameRegex.test(name)) {
+        showTostMessage('Имя должно содержать только буквы', 'linear-gradient(to right, #ff2929, #ff2929)');
+        return false;
+    }
+
+    if (!phoneRegex.test(phone)) {
+		showTostMessage('Номер телефона должен содержать только цифры, +, - и ()', 'linear-gradient(to right, #ff2929, #ff2929)');
+        return false;
+    }
+
+    if (!checkbox) {
+        showTostMessage('Вы должны согласиться с условиями', 'linear-gradient(to right, #ff2929, #ff2929)');
+        return false;
+    }
+
+    return true;
 }
