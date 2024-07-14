@@ -3,6 +3,8 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
+    require 'vendor/autoload.php';
+
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
@@ -11,7 +13,7 @@
     require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
     require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '.env.local');
     $dotenv->load();
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

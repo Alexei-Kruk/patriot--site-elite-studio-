@@ -1,45 +1,40 @@
-// function forms() {
-	const forms = document.querySelectorAll('form');
+document.getElementById('form').addEventListener('submit', function (e) {
+	e.preventDefault();
 
-	const message = {
-		loading: '/src/assets/img/spinner.svg',
-		success: 'Спасибо! Скоро мы с вами свяжемся',
-		failure: 'Что-то пошло не так...',
-	};
+	const formData = new FormData(this);
+	const data = {};
+	formData.forEach((value, key) => (data[key] = value));
 
-	forms.forEach(item => {
-		postData(item);
+	fetch(this.action, {
+		method: 'POST',
+		body: JSON.stringify(data),
+		mode: 'no-cors',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	})
+	.then(response => {
+		if (!response.ok) {
+			throw new Error('Network response was not ok');
+		}
+		return response.text(); // Изменено с response.json() на response.text()
+	})
+	.then(text => {
+		if (text) {
+			return JSON.parse(text); // Парсинг текста в JSON
+		} else {
+			throw new Error('Empty response');
+		}
+	})
+	.then(data => {
+		if (data.result === 'success') {
+			alert('Сообщение отправлено успешно!');
+		} else {
+			alert('Ошибка при отправке сообщения.');
+		}
+	})
+	.catch(error => {
+		console.error('Ошибка:', error);
+		alert('Ошибка при отправке сообщения.');
 	});
-
-	function postData(form) {
-		form.addEventListener('submit', e => {
-			e.preventDefault();
-
-			let statusMessage = document.createElement('div');
-			statusMessage.classList.add('status');
-			statusMessage.textContent = message.loading;
-			form.append(statusMessage);
-
-			const requests = new XMLHttpRequest();
-			requests.open('POST', 'server.php');
-			// requests.setRequestHeader('Content-type', 'multipart/form-data');
-
-			const formData = new FormData(form);
-			requests.send(formData);
-
-			requests.addEventListener('load', () => {
-				if (requests.status === 200) {
-					console.log(requests.response);
-					statusMessage.textContent = message.success;
-					form.reset();
-				} else {
-					statusMessage.textContent = message.failure;
-				}
-			});
-
-
-		});
-	}
-}
-
-export default forms;
+});

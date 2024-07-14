@@ -20,7 +20,7 @@ async function formSend(e) {
 	let response = await fetch('php/emailSend.php', {
 		method: 'POST',
 		body: formData,
-		mode: 'no-cors',
+		mode: 'cors',
 	});
 
 	if (response.ok) {
