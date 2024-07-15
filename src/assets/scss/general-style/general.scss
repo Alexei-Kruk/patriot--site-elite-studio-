@@ -1,15 +1,15 @@
-@import url("../root/root.css");
-@import url("../fonts-style/fonts.css");
+@import url('../root/root.css');
+@import url('../fonts-style/fonts.css');
 
-@import url("../header-style/header.css");
-@import url("../banner-style/banner.css");
-@import url("../arrows-style/arrows.css");
-@import url("../my-owl-carousel-style/my-owl-carousel.css");
-@import url("../rates-style/rates-new.css");
-@import url("../burger-menu/burger-menu.css");
+@import url('../header-style/header.css');
+@import url('../banner-style/banner.css');
+@import url('../arrows-style/arrows.css');
+@import url('../my-owl-carousel-style/my-owl-carousel.css');
+@import url('../rates-style/rates.css');
+@import url('../burger-menu/burger-menu.css');
 
-
-body, html {
+body,
+html {
 	margin: 0;
 	padding: 0;
 	background-color: var(--background-color-body);
@@ -36,15 +36,6 @@ body, html {
 	}
 }
 
-// @media (max-width: 1600px) {
-// 	.wrapper {
-// 		max-width: 1600px;
-// 	}
-// 	.container {
-// 		max-width: 1420px;
-// 	}
-// }
-
 @media (max-width: 1440px) {
 	.wrapper {
 		max-width: 1440px;
@@ -68,7 +59,7 @@ body, html {
 		max-width: 992px;
 	}
 	.container {
-		max-width: 830px;
+		max-width: 790px;
 	}
 }
 
@@ -90,12 +81,39 @@ body, html {
 	}
 }
 
+@media (max-width: 670px) {
+	.wrapper {
+		max-width: 670px;
+	}
+	.container {
+		max-width: 600px;
+	}
+}
+
 @media (max-width: 540px) {
 	.wrapper {
 		max-width: 540px;
 	}
 	.container {
 		max-width: 480px;
+	}
+}
+
+@media (max-width: 430px) {
+	.wrapper {
+		max-width: 430px;
+	}
+	.container {
+		max-width: 375px;
+	}
+}
+
+@media (max-width: 375px) {
+	.wrapper {
+		max-width: 375px;
+	}
+	.container {
+		max-width: 345px;
 	}
 }
 
@@ -107,4 +125,3 @@ body, html {
 		max-width: 290px;
 	}
 }
-

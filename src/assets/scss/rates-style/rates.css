@@ -13,20 +13,19 @@
   font-size: 42px;
 }
 .rates__tabs {
+  width: 100%;
   margin: 10px 0;
   display: flex;
-  flex-direction: row;
-  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .rates__tabs .rates__tab {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
   border-radius: 15px;
   border: var(--border-color) 1px solid;
   overflow: hidden;
-  width: 357px;
-  height: 570px;
+  flex: 1 1 calc(25% - 10px);
+  box-sizing: border-box;
+  margin: 5px;
 }
 .rates__tabs .rates__tab_title {
   height: 250px;
@@ -119,13 +118,12 @@
   text-align: center;
 }
 
-@media (max-width: 10px) {
+@media (max-width: 1650px) {
   .rates {
     padding: 90px 0;
   }
   .rates__tab {
-    width: auto;
-    height: auto;
+    flex: 1 1 calc(33.33% - 10px);
   }
   .rates__tab_title {
     height: 184px;
@@ -171,8 +169,7 @@
     font-size: 31px;
   }
   .rates__tabs .rates__tab {
-    width: auto;
-    height: 432px;
+    flex: 1 1 calc(25% - 10px);
   }
   .rates__tabs .rates__tab_title {
     height: 184px;
@@ -222,10 +219,6 @@
   }
   .rates__tabs {
     gap: 30px;
-  }
-  .rates__tabs .rates__tab {
-    width: auto;
-    height: 428px;
   }
   .rates__tabs .rates__tab_title {
     height: 184px;
@@ -280,6 +273,9 @@
     display: flex;
     flex-direction: column;
   }
+  .rates__tab {
+    flex: 1 1 calc(50% - 10px);
+  }
   .rates__pagination {
     align-self: center;
   }
@@ -295,7 +291,12 @@
     gap: 20px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 670px) {
+  .rates__tab {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+@media (max-width: 540px) {
   .rates {
     display: flex;
     flex-direction: column;
@@ -310,10 +311,9 @@
   }
   .rates__tabs {
     margin: 10px 0 20px;
-    gap: 10px;
   }
   .rates__tabs .rates__tab {
-    width: 280px;
+    flex: 1 1 calc(50% - 10px);
     height: auto;
   }
   .rates__tabs .rates__tab_title {
@@ -331,13 +331,107 @@
     margin: 0 15px;
   }
   .rates__tabs .rates__tab_comission .rates__tab_font {
+    font-size: 13px;
+  }
+  .rates__tabs .rates__tab_comission .rates__tab_font-bold {
+    font-size: 13px;
+  }
+  .rates__tabs .rates__tab_price {
+    margin: 5px 10px 15px;
+  }
+  .rates__tabs .rates__tab_price-font-bold {
+    font-size: 16px;
+  }
+  .rates__tabs .rates__tab_price-font-bold-old {
+    font-size: 14px;
+  }
+  .rates__tabs .rates__tab_price-button {
+    width: 100px;
+    height: 44px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 430px) {
+  .rates {
+    padding: 50px 0;
+  }
+  .rates__top {
+    justify-content: flex-start;
+  }
+  .rates__top_title {
+    font-size: 22px;
+  }
+  .rates__tabs .rates__tab {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    width: 370px;
+  }
+  .rates__tabs .rates__tab_title {
+    height: 190px;
+  }
+  .rates__tabs .rates__tab_title-text {
+    font-size: 18px;
+    left: 15px;
+    bottom: 8px;
+  }
+  .rates__tabs .rates__tab_comission {
+    margin: 0 15px;
+  }
+  .rates__tabs .rates__tab_comission .rates__tab_font {
     font-size: 14px;
   }
   .rates__tabs .rates__tab_comission .rates__tab_font-bold {
     font-size: 14px;
   }
   .rates__tabs .rates__tab_price {
-    margin: 5px 15px 15px;
+    margin: 0 15px 20px;
+  }
+  .rates__tabs .rates__tab_price-font-bold {
+    font-size: 18px;
+  }
+  .rates__tabs .rates__tab_price-font-bold-old {
+    font-size: 14px;
+  }
+  .rates__tabs .rates__tab_price-button {
+    width: 115px;
+    height: 44px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  .rates {
+    padding: 50px 0;
+  }
+  .rates__top {
+    justify-content: flex-start;
+  }
+  .rates__top_title {
+    font-size: 22px;
+  }
+  .rates__tabs .rates__tab {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    width: 335px;
+  }
+  .rates__tabs .rates__tab_title {
+    height: 190px;
+  }
+  .rates__tabs .rates__tab_title-text {
+    font-size: 18px;
+    left: 15px;
+    bottom: 8px;
+  }
+  .rates__tabs .rates__tab_comission {
+    margin: 0 15px;
+  }
+  .rates__tabs .rates__tab_comission .rates__tab_font {
+    font-size: 14px;
+  }
+  .rates__tabs .rates__tab_comission .rates__tab_font-bold {
+    font-size: 14px;
+  }
+  .rates__tabs .rates__tab_price {
+    margin: 0 15px 20px;
   }
   .rates__tabs .rates__tab_price-font-bold {
     font-size: 18px;

@@ -10,26 +10,20 @@ $(document).ready(function () {
 				items: 1,
 			},
 			540: {
-				items: 1,
+				items: 2,
 			},
-			992: {
-				items: 3,
+			1024: {
 				dots: false,
 			},
 			1200: {
 				items: 3,
 				dots: false,
 			},
-			1441: {
+			1440: {
 				items: 4,
 				margin: 25,
 				dots: false,
 			},
-			// 1550: {
-			// 	items: 3,
-			// 	margin: 15,
-			// 	dots: false,
-			// },
 			1650: {
 				items: 4,
 				margin: 25,
