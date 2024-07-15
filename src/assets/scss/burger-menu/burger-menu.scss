@@ -34,8 +34,6 @@
 
 .burger::after { bottom: 0 }
 
-
-/* Добавляем класс active для анимации иконки бургера */
 .burger.active span { transform: scale(0) }
 
 .burger.active::before{

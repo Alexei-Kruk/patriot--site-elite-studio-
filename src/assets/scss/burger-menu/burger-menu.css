@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .burger-menu {
   display: none;
   cursor: pointer;
@@ -39,7 +38,6 @@
   bottom: 0;
 }
 
-/* Добавляем класс active для анимации иконки бургера */
 .burger.active span {
   transform: scale(0);
 }
