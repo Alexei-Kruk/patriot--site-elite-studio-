@@ -4,30 +4,35 @@ $(document).ready(function () {
 		margin: 30,
 		nav: false,
 		dots: true,
-		dotsEach: 3,
+		dotsEach: 1,
 		responsive: {
 			0: {
 				items: 1,
 			},
-			420: {
-				items: 2,
+			540: {
+				items: 1,
 			},
 			992: {
 				items: 3,
 				dots: false,
 			},
 			1200: {
-				items: 4,
+				items: 3,
 				dots: false,
 			},
 			1441: {
-				items: 3,
-				margin: 60,
+				items: 4,
+				margin: 25,
 				dots: false,
 			},
-			1700: {
+			// 1550: {
+			// 	items: 3,
+			// 	margin: 15,
+			// 	dots: false,
+			// },
+			1650: {
 				items: 4,
-				margin: 28,
+				margin: 25,
 				dots: false,
 			},
 		},

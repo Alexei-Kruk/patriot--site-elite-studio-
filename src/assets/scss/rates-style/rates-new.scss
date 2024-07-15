@@ -15,19 +15,24 @@
 	}
 
 	&__tabs {
+		width: 100%;
 		margin: 10px 0;
 
 		display: flex;
-		flex-direction: row;
-		gap: 30px;
+		flex-wrap: wrap;
+    	justify-content: space-between;
 
 		.rates__tab {
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: space-between;
+			// display: flex;
+			// flex-flow: column nowrap;
+			// justify-content: space-between;
 			border-radius: 15px;
 			border: var(--border-color) 1px solid;
 			overflow: hidden;
+
+			flex: 1 1 calc(25% - 10px); /* 4 карточки на странице */
+			box-sizing: border-box;
+			margin: 5px;
 
 			width: 357px;
 			height: 570px;
@@ -160,13 +165,14 @@
 // 	}
 // }
 
-@media (max-width: 10px) {
+@media (max-width: 1650px) {
 	.rates {
 		padding: 90px 0;
 	}
 	.rates__tab {
-		width: auto;
-		height: auto;
+		// width: auto;
+		// height: auto;
+		flex: 1 1 calc(33.33% - 10px);
 		&_title {
 			height: 184px;
 			&-img {
@@ -332,6 +338,9 @@
 		display: flex;
 		flex-direction: column;
 	}
+	.rates__tab {
+		flex: 1 1 calc(50% - 10px);
+	}
 	.rates__pagination {
 		align-self: center;
 	}
@@ -349,7 +358,7 @@
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 540px) {
 	.rates {
 		display: flex;
 		flex-direction: column;

@@ -4,7 +4,7 @@
 @import url("../banner-style/banner.css");
 @import url("../arrows-style/arrows.css");
 @import url("../my-owl-carousel-style/my-owl-carousel.css");
-@import url("../rates-style/rates.css");
+@import url("../rates-style/rates-new.css");
 @import url("../burger-menu/burger-menu.css");
 body, html {
   margin: 0;
@@ -29,7 +29,7 @@ body, html {
     max-width: 1700px;
   }
   .container {
-    max-width: 1390px;
+    max-width: 1520px;
   }
 }
 @media (max-width: 1440px) {
@@ -37,7 +37,7 @@ body, html {
     max-width: 1440px;
   }
   .container {
-    max-width: 1139px;
+    max-width: 1239px;
   }
 }
 @media (max-width: 1200px) {
@@ -56,6 +56,14 @@ body, html {
     max-width: 830px;
   }
 }
+@media (max-width: 820px) {
+  .wrapper {
+    max-width: 820px;
+  }
+  .container {
+    max-width: 750px;
+  }
+}
 @media (max-width: 768px) {
   .wrapper {
     max-width: 768px;
@@ -64,14 +72,19 @@ body, html {
     max-width: 708px;
   }
 }
+@media (max-width: 540px) {
+  .wrapper {
+    max-width: 540px;
+  }
+  .container {
+    max-width: 480px;
+  }
+}
 @media (max-width: 320px) {
   .wrapper {
     max-width: 320px;
   }
   .container {
     max-width: 290px;
-  }
-  .banner__owl-carousel.owl-carousel .owl-dots {
-    top: 665px;
   }
 }/*# sourceMappingURL=general.css.map */

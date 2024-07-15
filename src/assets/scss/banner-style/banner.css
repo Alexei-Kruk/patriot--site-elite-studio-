@@ -211,7 +211,7 @@
   .banner .banner__block .banner__description {
     margin: 30px 0 50px;
     height: auto;
-    max-width: 708px;
+    max-width: 808px;
     align-self: center;
   }
   .banner .banner__block .banner__description_text .text_big-size {
@@ -219,7 +219,7 @@
     margin-bottom: 35px;
   }
   .banner .banner__block .feedback-form {
-    max-width: 648px;
+    max-width: 808px;
     margin-bottom: 110px;
   }
   .banner .banner__block .feedback-form__title {
@@ -235,23 +235,24 @@
     justify-content: center;
     align-items: center;
     gap: 13px;
-    max-width: 648px;
+    max-width: 808px;
   }
   .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item {
     font-size: 14px;
   }
   .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item .item__input {
     height: 42px;
-    max-width: 315.5px;
+    max-width: 365.5px;
     font-size: 24px;
     padding: 0;
+    box-sizing: border-box;
   }
   .banner .banner__block .feedback-form__input_wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 648px;
+    max-width: 768px;
     margin: 0;
   }
   .banner .banner__block .feedback-form__input_wrapper .feedback-form__input_checkbox {
@@ -268,36 +269,30 @@
     margin: 25px 0 0;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 820px) {
   .banner {
-    background: url("../../img/bg/bg-img-square-small.jpg") center/110% auto no-repeat;
+    background: url("../../img/bg/bg-img-square.jpg") center/100% auto no-repeat;
   }
   .banner .banner__block {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 51px;
+    justify-content: flex-start;
+    margin-top: 20px;
   }
   .banner .banner__block .banner__description {
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-    max-width: 290px;
-    height: auto;
-    margin: 30px 0;
+    max-width: 745px;
+    height: 72px;
+    margin: 100px 0 120px;
   }
   .banner .banner__block .banner__description_text .text_big-size {
-    font-size: 26px;
-    margin-bottom: 10px;
+    font-size: 36px;
+    margin-bottom: 35px;
   }
   .banner .banner__block .banner__description_text .text_small-size {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
   }
   .banner .banner__block .feedback-form {
-    padding: 20px;
-    max-width: 250px;
-    margin-bottom: 80px;
+    padding: 25px 30px 30px;
+    max-width: 685px;
   }
   .banner .banner__block .feedback-form__title {
     font-size: 20px;
@@ -305,46 +300,260 @@
   }
   .banner .banner__block .feedback-form__text {
     font-size: 14px;
-    margin: 10px 0 15px;
-    max-width: 250px;
-    line-height: 20px;
+    margin: 10px 0 25px;
+    max-width: auto;
+    line-height: 25px;
+  }
+  .banner .banner__block .feedback-form__block_wrapper {
+    flex-direction: column;
   }
   .banner .banner__block .feedback-form__block_wrapper .feedback-form__block {
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    flex-direction: row;
     gap: 13px;
   }
   .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item {
     font-size: 14px;
   }
   .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item .item__input {
-    height: 42px;
-    width: 228px;
-    margin-top: 5px;
-    font-size: 18px;
+    height: 44px;
+    width: 335px;
+    font-size: 24px;
     padding: 0 10px;
   }
   .banner .banner__block .feedback-form__input_wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    max-width: 250px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
   }
   .banner .banner__block .feedback-form__input_wrapper .feedback-form__input_checkbox {
-    gap: 15px;
-    margin: 35px 0 0;
+    gap: 10px;
+    margin: 0;
   }
   .banner .banner__block .feedback-form__input_wrapper .feedback-form__input_checkbox .info-transfer {
     font-size: 12px;
   }
   .banner .banner__block .feedback-form__input_wrapper .feedback-form__button {
-    width: 250px;
+    width: 168px;
     height: 44px;
     font-size: 14px;
+    margin: 0;
   }
 }
-._error {
-  box-shadow: 0 0 15px #f00;
+@media (max-width: 768px) {
+  .banner .banner__block {
+    margin-top: 30px;
+  }
+  .banner .banner__block .banner__description {
+    max-width: 708px;
+    height: 50px;
+    margin: 90px 0 130px;
+  }
+  .banner .banner__block .feedback-form {
+    max-width: 648px;
+  }
+  .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item .item__input {
+    height: 44px;
+    width: 320px;
+    font-size: 24px;
+    padding: 0 10px;
+  }
+  .banner .banner__block .feedback-form__input_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .banner .banner__block .feedback-form__input_wrapper .feedback-form__input_checkbox {
+    gap: 10px;
+    margin: 0;
+  }
+  .banner .banner__block .feedback-form__input_wrapper .feedback-form__input_checkbox .info-transfer {
+    font-size: 12px;
+  }
+  .banner .banner__block .feedback-form__input_wrapper .feedback-form__button {
+    width: 168px;
+    height: 44px;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+@media (max-width: 670px) {
+  .banner {
+    background: url("../../img/bg/bg-img-square.jpg") center/120% auto no-repeat;
+  }
+  .banner .banner__block {
+    margin-top: 20px;
+  }
+  .banner .banner__block .banner__description {
+    max-width: 630px;
+    height: 50px;
+    margin: 90px 0 130px;
+  }
+  .banner .banner__block .banner__description_text .text_big-size {
+    margin-bottom: 20px;
+  }
+  .banner .banner__block .feedback-form {
+    max-width: 628px;
+  }
+  .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item .item__input {
+    height: 44px;
+    width: 280px;
+    font-size: 24px;
+    padding: 0 10px;
+  }
+  .banner .banner__block .feedback-form__input_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .banner .banner__block .feedback-form__input_wrapper .feedback-form__input_checkbox {
+    gap: 10px;
+    margin: 0;
+  }
+  .banner .banner__block .feedback-form__input_wrapper .feedback-form__input_checkbox .info-transfer {
+    font-size: 12px;
+  }
+  .banner .banner__block .feedback-form__input_wrapper .feedback-form__button {
+    width: 168px;
+    height: 44px;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+@media (max-width: 540px) {
+  .banner {
+    background: url("../../img/bg/bg-img-square-small.jpg") center/100% auto no-repeat;
+  }
+  .banner .banner__block {
+    margin-top: 30px;
+  }
+  .banner .banner__block .banner__description {
+    max-width: 480px;
+    height: 50px;
+    margin: 60px 0 130px;
+  }
+  .banner .banner__block .banner__description_text .text_big-size {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .banner .banner__block .banner__description_text .text_small-size {
+    font-size: 14px;
+  }
+  .banner .banner__block .feedback-form {
+    padding: 20px;
+    max-width: 450px;
+  }
+  .banner .banner__block .feedback-form__title {
+    font-size: 20px;
+  }
+  .banner .banner__block .feedback-form__text {
+    margin: 10px 0 15px;
+    max-width: auto;
+    line-height: 25px;
+  }
+  .banner .banner__block .feedback-form__block_wrapper {
+    flex-direction: column;
+  }
+  .banner .banner__block .feedback-form__block_wrapper .feedback-form__block {
+    flex-direction: row;
+    gap: 13px;
+  }
+  .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item {
+    font-size: 14px;
+  }
+  .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item .item__input {
+    height: 44px;
+    width: 210px;
+    font-size: 24px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 430px) {
+  .banner .banner__block {
+    margin-top: 30px;
+  }
+  .banner .banner__block .banner__description {
+    max-width: 375px;
+    height: 50px;
+    margin: 60px 0 130px;
+  }
+  .banner .banner__block .feedback-form {
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 335px;
+  }
+  .banner .banner__block .feedback-form__title {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .banner .banner__block .feedback-form__text {
+    margin: 10px 0 20px;
+    max-width: auto;
+    line-height: 25px;
+  }
+  .banner .banner__block .feedback-form__block_wrapper {
+    flex-direction: column;
+  }
+  .banner .banner__block .feedback-form__block_wrapper .feedback-form__block {
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+  .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item {
+    font-size: 14px;
+  }
+  .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item .item__input {
+    height: 44px;
+    width: 335px;
+    font-size: 24px;
+    padding: 0 10px;
+  }
+  .banner .banner__block .feedback-form__input_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .banner .banner__block .feedback-form__input_wrapper .feedback-form__input_checkbox {
+    gap: 10px;
+    margin: 0;
+  }
+  .banner .banner__block .feedback-form__input_wrapper .feedback-form__input_checkbox .info-transfer {
+    font-size: 12px;
+  }
+  .banner .banner__block .feedback-form__input_wrapper .feedback-form__button {
+    width: 335px;
+    height: 44px;
+    font-size: 14px;
+    margin: 30px 0 0 0;
+  }
+}
+@media (max-width: 320px) {
+  .banner {
+    background: url("../../img/bg/bg-img-square-small.jpg") center/125% auto no-repeat;
+  }
+  .banner .banner__block {
+    margin-top: 20px;
+  }
+  .banner .banner__block .banner__description {
+    max-width: 290px;
+    height: 70px;
+    margin: 60px 0 130px;
+  }
+  .banner .banner__block .feedback-form {
+    max-width: 250px;
+  }
+  .banner .banner__block .feedback-form__block_wrapper .feedback-form__block_item .item__input {
+    width: 250px;
+  }
+  .banner .banner__block .feedback-form__input_wrapper .feedback-form__button {
+    width: 250px;
+  }
 }/*# sourceMappingURL=banner.css.map */

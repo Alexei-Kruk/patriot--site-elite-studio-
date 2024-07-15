@@ -8,3 +8,21 @@
 	left: 50%;
 	transform: translateX(-50%);
 }
+
+@media (max-width: 768px) {
+	.banner__owl-carousel.owl-carousel .owl-dots {
+		top: 490px;
+	}
+}
+
+@media (max-width: 430px) {
+	.banner__owl-carousel.owl-carousel .owl-dots {
+		top: 670px;
+	}
+}
+
+@media (max-width: 320px) {
+	.banner__owl-carousel.owl-carousel .owl-dots {
+		top: 710px;
+	}
+}
