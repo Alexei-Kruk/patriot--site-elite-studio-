@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		offCanvas: {
 			position: 'top',
 		},
+		pageScroll: {
+			"scroll": true,
+			"update": true
+    	},
 		hooks: {
 			onOpen: () => {
 				document.querySelector('#menu').style.pointerEvents = 'auto';
