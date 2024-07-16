@@ -51,7 +51,7 @@
 					color: var(--font-color-active);
 				}
 				&::after {
-					content: " ";
+					content: ' ';
 					background: var(--border-color);
 					width: 1px;
 					height: 90px;
@@ -78,10 +78,12 @@
 				align-items: center;
 				font-size: 16px;
 				list-style-type: none;
+				color: var(--font-color-main);
 
 				.header__link {
 					text-decoration: none;
 					margin: 0 15px;
+					color: var(--font-color-main);
 
 					&:visited {
 						color: var(--font-color-main);
@@ -91,6 +93,7 @@
 					}
 					&:hover {
 						text-decoration: underline;
+						color: var(--font-color-main);
 					}
 				}
 			}
@@ -109,6 +112,7 @@
 				align-items: center;
 				text-decoration: none;
 				font-size: 16px;
+				color: var(--font-color-main);
 
 				&:visited {
 					color: var(--font-color-main);
@@ -120,7 +124,7 @@
 					text-decoration: underline;
 				}
 				&::after {
-					content: " ";
+					content: ' ';
 					background: var(--border-color);
 					width: 1px;
 					height: 90px;
@@ -139,6 +143,7 @@
 				text-decoration: none;
 				font-size: 16px;
 				margin-left: 35px;
+				color: var(--font-color-main);
 
 				&:visited {
 					color: var(--font-color-main);
@@ -190,7 +195,7 @@
 						margin: 0 10px;
 					}
 				}
-			}	
+			}
 			.header__right-block {
 				.header__adress {
 					font-size: 15px;
@@ -231,7 +236,7 @@
 				.header__links {
 					display: none;
 				}
-			}	
+			}
 			.header__right-block {
 				.header__adress {
 					display: none;
@@ -243,7 +248,7 @@
 						margin: 0 25px 0 8px;
 					}
 					&::after {
-						content: " ";
+						content: ' ';
 						background: var(--border-color);
 						width: 1px;
 						height: 70px;
@@ -257,7 +262,6 @@
 		}
 	}
 }
-
 
 @media (max-width: 540px) {
 	.header {
@@ -280,7 +284,7 @@
 						margin: 0 24px 0 8px;
 					}
 				}
-			}	
+			}
 			.header__right-block {
 				.header__adress {
 					display: none;
@@ -289,7 +293,7 @@
 					display: none;
 				}
 				&::before {
-					content: " ";
+					content: ' ';
 					background: var(--border-color);
 					width: 1px;
 					height: 50px;
@@ -324,7 +328,7 @@
 						margin: 0 24px 0 8px;
 					}
 				}
-			}	
+			}
 			.header__right-block {
 				.header__adress {
 					display: none;
@@ -333,7 +337,7 @@
 					display: none;
 				}
 				&::before {
-					content: " ";
+					content: ' ';
 					background: var(--border-color);
 					width: 1px;
 					height: 50px;
