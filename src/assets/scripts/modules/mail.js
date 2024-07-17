@@ -17,7 +17,7 @@ async function formSend(e) {
 
 	const formData = new FormData(form);
 
-	let response = await fetch('php/emailSend.php', {
+	let response = await fetch('assets/php/emailSend.php', {
 		method: 'POST',
 		body: formData,
 		mode: 'cors',
