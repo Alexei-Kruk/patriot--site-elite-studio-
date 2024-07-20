@@ -2,12 +2,15 @@
 /**
  *  MODX Configuration file
  */
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__, '.env.local');
+$dotenv->load();
+
 $database_type = 'mysql';
 $database_server = 'localhost';
-$database_user = 'patriottes_modx381';
-$database_password = 'p0-Nk(192S';
+$database_user = $_ENV['DATABASE_USERNAME'];
+$database_password = $_ENV['DATABASE_PASSWORD'];
 $database_connection_charset = 'utf8';
-$dbase = 'patriottes_modx381';
+$dbase = $_ENV['D_BASE'];
 $table_prefix = 'modx8w_';
 $database_dsn = 'mysql:host=localhost;dbname=patriottes_modx381;charset=utf8';
 $config_options = array (
@@ -17,10 +20,10 @@ $driver_options = array (
 
 $lastInstallTime = 1720955456;
 
-$site_id = 'modx6693b240583c29.59727403';
-$site_sessionname = 'SNbpexuyn6v8euk';
-$https_port = '443';
-$uuid = 'cpofykre-34et-7gct-s8ps-xaqgthyb4ad1';
+$site_id = $_ENV['SITE_ID'];
+$site_sessionname = $_ENV['SESSION_NAME'];
+$https_port = $_ENV['PORT'];
+$uuid = $_ENV['UUID'];
 
 if (!defined('MODX_CORE_PATH')) {
     $modx_core_path= '/home/patriottes/public_html/admin/core/';
