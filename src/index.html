@@ -427,21 +427,15 @@
 											</p>
 
 											<div class="banners">
-												<div
-													class="banners__promotion banners__text"
-												>
-													<span>Акция</span>
-												</div>
-												<div
-													class="banners__new banners__text"
-												>
-													<span>Новинка</span>
-												</div>
-												<div
-													class="banners__hit banners__text"
-												>
-													<span>Хит</span>
-												</div>
+												<span class="banners__promotion banners__text">
+													Акция
+												</span>
+												<span class="banners__new banners__text">
+													Новинка
+												</span>
+												<span class="banners__hit banners__text">
+													Хит
+												</span>
 											</div>
 										</div>
 									</div>
@@ -715,5 +709,18 @@
 		<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.1.3/dist/polyfill.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.5.0/dist/fetch.umd.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2.3.2/dist/css-vars-ponyfill.min.js"></script>
+
+		<script>
+            const bannersTextElements = document.querySelectorAll('.banners__text');
+
+            bannersTextElements.forEach(span => {
+
+                if (span.textContent.trim() === '') {
+                    span.style.display = 'none';
+                } else {
+                    span.style.display = 'block';
+                }
+            });
+        </script>
 	</body>
 </html>
